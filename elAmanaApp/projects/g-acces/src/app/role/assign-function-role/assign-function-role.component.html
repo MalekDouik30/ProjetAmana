@@ -1,0 +1,111 @@
+<!--div class="list-wrapper pt-2"--> <!--Scrol-->
+<!--
+<div class="row">
+    <div class="card">
+      <div class="card-body">
+        <div class="list-wrapper pt-2">
+        <input type="text" class="form-control" id="navbar-search-input" placeholder="Recherche..." [(ngModel)]="searchWord" />
+  
+        <form class="form-sample" #monform="ngForm" (submit)="onSubmit(monform)">
+        <div class="card-body">
+          <p class="card-title mb-0" [(ngModel)]="this.data.role.idRole" #rolId="ngModel" name="rolId">
+          Ajouter des fonctions pour : {{ this.data.role.nomRole }}
+          </p>
+        </div>
+        
+          <div class="add-items d-flex mb-0 mt-2">
+            <section [(ngModel)]="serviceRF.fromData.fonId" #fonId="ngModel" name="fonId" class="function-assign-role-function">
+
+                <ng-container *ngFor="let item of this.fonService.listfonction | filter : searchWord">
+
+                </ng-container>
+
+                <ng-container *ngFor="let item of this.fonService.listfonction | filter : searchWord">
+                  <ng-container *ngIf="item.fonEtat==true">
+                    <mat-checkbox  color="warn" [checked]="verificationCheked(item.fonId)" (change)="checkCheckBoxvalue($event,item.fonId)" 
+                    style="color: rgb(0, 0, 0);"> {{item.fonLibelle}} </mat-checkbox>
+                    <br>
+                </ng-container>
+              </ng-container>
+            </section>
+          </div>
+        </form>
+      </div>
+      <div class="mt-3">
+        <button type="button" class="btn btn-outline-secondary btn-lg btn-block" (click)="closeDialog()" >Retour</button>
+    </div>
+    </div>
+    </div>
+</div>
+-->
+
+<div class="row">
+    <div class="card">
+      <div class="card-body">
+        <div class="list-wrapper pt-2">
+        <input type="text" class="form-control" id="navbar-search-input" placeholder="Recherche..." [(ngModel)]="searchWord" />
+  
+        <form class="form-sample" #monform="ngForm" (submit)="onSubmit(monform)">
+        <div class="card-body">
+          <p class="card-title mb-0" [(ngModel)]="this.data.role.idRole" #rolId="ngModel" name="rolId">
+          Ajouter des fonctions pour : {{ this.data.role.nomRole }}
+          </p>
+        </div>
+        
+          <div class="add-items d-flex mb-0 mt-2">
+            <section [(ngModel)]="serviceRF.fromData.fonId" #fonId="ngModel" name="fonId">
+                <ng-container *ngFor="let a of listApplications | filter : searchWord">
+                    <ng-container *ngIf="a.appEtat == true">
+                        <br>
+                       
+                        
+                        <mat-checkbox color="warn"style="color: rgb(0, 0, 0);" [checked]="verifAppchecked(a.appId)"  (change)="checkAppCheckBoxvalue($event,a.appId)" > 
+                          <h4> {{a.appLibelle}}</h4>
+                        </mat-checkbox>
+                       
+                    <ng-container *ngFor="let m of listModules | filter : searchWord">
+                        <ng-container *ngIf="a.appId == m.modApplication && m.modEtat ==true">
+                            <br>
+                            <mat-checkbox class="module-assign-role-function" color="warn"style="color: rgb(0, 0, 0);" [checked]="verifModulechecked(m.modId)"  (change)="checkModuleCheckBoxvalue($event,m.modId)">  
+                                {{m.modLibelle}}
+                            </mat-checkbox>
+                             
+                            <ng-container *ngFor="let f of this.fonService.listfonction | filter : searchWord">
+                                <ng-container *ngIf="m.modId == f.fonIdModule && f.fonEtat==true">
+                                    <br>
+                                    <mat-checkbox class="function-assign-role-function" color="warn" [checked]="verificationCheked(f.fonId)" (change)="checkCheckBoxvalue($event,f.fonId)" 
+                                    style="color: rgb(0, 0, 0);"> {{f.fonLibelle}} 
+                                    </mat-checkbox>
+                                </ng-container>
+                            </ng-container>
+                        </ng-container>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+
+
+
+
+
+                
+
+                <!--Fonction sans role ni application-->
+                <!--
+                <ng-container *ngFor="let item of this.fonService.listfonction | filter : searchWord">
+                  <ng-container *ngIf="item.fonEtat==true">
+                    <mat-checkbox  color="warn" [checked]="verificationCheked(item.fonId)" (change)="checkCheckBoxvalue($event,item.fonId)" 
+                    style="color: rgb(0, 0, 0);"> {{item.fonLibelle}} </mat-checkbox>
+                    <br>
+                </ng-container>
+              </ng-container>
+                -->
+            </section>
+          </div>
+        </form>
+      </div>
+      <div class="mt-3">
+        <button type="button" class="btn btn-outline-secondary btn-lg btn-block" (click)="closeDialog()" >Retour</button>
+    </div>
+    </div>
+    </div>
+</div>

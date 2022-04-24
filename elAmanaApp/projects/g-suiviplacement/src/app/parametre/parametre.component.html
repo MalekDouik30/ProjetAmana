@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <app-navbar-placement></app-navbar-placement>
+        <div class="card-body">
+         <h1> Paramètres globaux </h1>
+          <div class="table-responsive">
+          <table class="table table-striped table-borderless">
+            <thead>
+              <tr>
+                <th>Nombre de jours</th>
+                <th>Email d'envoi</th>
+                <th>Email de réception</th>
+                <th >Modifier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of paramService.listParametre">
+                <td> {{item.par_nbrJours}} </td>
+                <td> {{item.par_email_from}} </td>
+                <td> {{item.par_email_to}} </td>
+
+                <td>
+
+                  <!--Update Button-->
+                  <button *ngIf="this.authService.listauthorizedFunctions[0]" type="button" class="btn btn-inverse-success btn-icon" (click)="onSelection(item)">
+                      <i class="ti-pencil-alt2"></i>
+                  </button>
+               </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
+</div>
+<app-footer></app-footer>
+

@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <div class="main-panel">
+                <ul id="menu">
+                    <a class="menu-button" href="#menu">
+                        <img class="img-dim" src="assets/images/logo-mini.png" alt="logo"/>
+                    </a>
+                    <a class="menu-button"  href="#0">
+                        <img class="img-dim" src="assets/images/logo-mini.png" alt="logo"/>
+                    </a>
+                    <li *ngIf="this.authService.listauthorizedApplication[3]" class="menu-item" (click)="appGSuiviPlacement()">
+                        <a href="404"> <i class="bi bi-cash-coin"></i> </a>
+                        <span class="popover above">Application de suivi des placements </span>
+                        <h5 class="sub-title middle">Gestion des placements</h5>
+                    </li>
+                    <li *ngIf="this.authService.listauthorizedApplication[1]" class="menu-item" (click)="appGStock()">
+                        <a href="gStock/product"> <i class="bi bi-box-seam" ></i></a>
+                        <span class="popover above">Application de gestion de stock</span>
+                        <h5 class="sub-title middle">Gestion de stock</h5>
+                    </li>
+                    <li *ngIf="this.authService.listauthorizedApplication[0]" class="menu-item" (click)="appGAcces()" >
+                        <a href="gAcces/dashboard_utilisateur"> <i class="bi bi-person-badge"></i> </a>
+                        <span class="popover above">Application de gestion d'accès</span>
+                        <h5 class="sub-title middle">Gestion d'accès</h5>
+                    </li>
+                    
+                    <li *ngIf="this.authService.listauthorizedApplication[2]" class="menu-item" (click)="appGDemandeCotation()">
+                        <a href="404"><i class="bi bi-file-earmark-minus"></i></a>
+                        <span class="popover above"> Application de gestion de demande de cotation</span>
+                        <h5 class="sub-title middle">Gestion de cotation</h5>
+                        </li>
+                    <li *ngIf="this.authService.listauthorizedApplication[5]" class="menu-item" (click)="appGRh()">
+                        <a href="404"><i class="bi bi-people"></i></a>
+                        <span class="popover above">Application de RHs</span>
+                        <h5 class="sub-title middle">RH</h5>
+
+                    </li>
+                    <li *ngIf="this.authService.listauthorizedApplication[4]" class="menu-item" (click)="appGSuiviCaisse()">
+                        <a href="404"><i class="bi bi-wallet2"></i></a>
+                        <span class="popover above">Application de gestion de caisse </span>
+                        <h5 class="sub-title middle">Gestion de caisse</h5>
+                    </li>
+                </ul>
+        </div>  
+   </div>
+</div>
+<app-footer></app-footer> 

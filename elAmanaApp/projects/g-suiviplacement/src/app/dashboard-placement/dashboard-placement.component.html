@@ -1,0 +1,351 @@
+<app-header></app-header>
+<div class="container-scroller">
+  <div class="container-fluid page-body-wrapper">
+    <app-navbar-placement></app-navbar-placement>
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-md-12 grid-margin">
+            <div class="row">
+              <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                <h2 class="font-weight-bold">Tableau de bord des placements</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 grid-margin transparent">
+            <div class="row">
+              <div class="col-md-12 mb-4 stretch-card transparent">
+                <div class="card card-tale">
+                  <div class="card-body" (click)="changeViewCard('')">
+                    <p class="mb-4">Total Montant Dépôt</p>
+                    <p class="fs-40 mb-2">
+                      {{ this.formatNumber.transform( this.montantPlacementGlobal) }} DT 
+                    </p>
+                    <p>
+                      Total des placements :
+                      <b> {{ this.nbrePlacementGlobal }} </b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--
+                            <div class="col-md-6 mb-4 stretch-card transparent">
+                              <div class="card card-dark-blue">
+                                <div class="card-body">
+                                  <p class="mb-4"></p>
+                                </div>
+                              </div>
+                            </div>
+                            -->
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+                <div class="card card-light-danger">
+                  <div
+                    class="card-body"
+                    (click)="changeViewCard('PlacementFinancierView')">
+                    <a class="carousel-control-next" role="button"data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only"></span>
+                    </a>
+
+                    <p class="mb-4">
+                      Total Montant : <b>{{ listTypePlacementLibelle[0] }}</b>
+
+                    </p>
+                    <p class="fs-40 mb-2">
+                      {{ this.formatNumber.transform( montantPlacementByType[0])}} DT
+
+                      
+                    </p>
+                    <p>
+                      Total des placements :
+                      <b> {{ nbrePlacementByType[0] }}</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 stretch-card transparent">
+                <div class="card card-light-blue">
+                  <div class="card-body" (click)="changeViewCard('PlacementImmobilierView')">
+                    
+                    <a class="carousel-control-next" role="button"data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only"></span>
+                    </a>
+                    <p class="mb-4">
+                      Total Montant : <b>{{ listTypePlacementLibelle[1] }} </b>
+                    </p>
+                    <p class="fs-40 mb-2">
+                      {{ this.formatNumber.transform(montantPlacementByType[1] ) }} DT
+                    </p>
+                    <p>
+                      Total des placements :
+                      <b>{{ nbrePlacementByType[1] }} </b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Profit ppc jour / ppc fin année comptable / ppc fin trimestre comptable-->
+
+          <div class="col-md-6 grid-margin transparent">
+            <div class="row">
+              <div class="col-md-12 mb-4 stretch-card transparent">
+                <div class="card card-table2">
+                  <div class="card-body" (click)="changeViewCard('')">
+                    <p class="mb-4">
+                      Total rémunération des placements financiers à la date du
+                      jour : <b> {{ getTodayDate() | date: "dd/MM/yyyy" }}</b>
+                    </p>
+                    <p class="fs-40 mb-2">
+                      {{
+                        this.formatNumber.transform(this.varTotalRemunerationDateDuJour )
+                      }}
+                      DT
+                    </p>
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+                <div class="card card-light-danger">
+                  <div class="card-body">
+                    <p class="mb-4">
+                      Total rémunération des placements financiers à la fin du
+                      prochain <b>trimestre comptable</b>.
+                    </p>
+                    <p class="fs-40 mb-2">
+                      {{ this.formatNumber.transform(this.varTotalRemunerationTrimestre ) }}
+                      DT
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 stretch-card transparent">
+                <div class="card card-light-blue">
+                  <div class="card-body">
+                    <p class="mb-4">
+                      Total rémunération des placements financiers à la fin de
+                      la <b>l'année comptable</b>
+                    </p>
+                    <p class="fs-40 mb-2">
+                      {{ this.formatNumber.transform(this.varTotalRemunerationAnnee ) }} DT
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- END Profit ppc jour / ppc fin année comptable / ppc fin trimestre comptable-->
+
+          <ng-container *ngIf="changeView == 'PlacementImmobilierView'">
+            <div class="col-md-6 grid-margin transparent">
+              <div class="row">
+                <!--Placement Financier-->
+                <ng-container *ngFor="let item of listFondsLibelle; let i = index">
+                  <div class="col-md-6 mb-4 stretch-card transparent">
+                    <div class="card card-light-blue">
+                      <div class="card-body">
+                        <p class="mb-4">
+                          <b>{{ listFondsLibelle[i] }} </b>
+                        </p>
+                        <p class="fs-40 mb-2">
+                          {{ this.formatNumber.transform(montantPlacementImmobilierByAction[i]) }} DT
+                        </p>
+                        <p>
+                          Total des placements :
+                          <b>{{ nbrePlacementImmobilierByAction[i] }} </b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+                <!-- END TEST-->
+              </div>
+            </div>
+          </ng-container>
+
+          <ng-container *ngIf="changeView == 'PlacementFinancierView'">
+            <div class="col-md-6 grid-margin transparent">
+              <div class="row">
+                <!--Placement Financier-->
+                <ng-container
+                  *ngFor="let item of listActionLibelle; let i = index"
+                >
+                  <div class="col-md-6 mb-4 stretch-card transparent">
+                    <div class="card card-light-danger">
+                      <div class="card-body">
+                        <p class="mb-4">
+                          <b>{{ listActionLibelle[i] }} </b>
+                        </p>
+                        <p class="fs-40 mb-2">
+                          {{ this.formatNumber.transform(montantPlacementByAction[i]) }} DT
+                        </p>
+                        <p>
+                          Total des placements :
+                          <b>{{ nbrePlacementByAction[i] }} </b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+                <!-- END TEST-->
+              </div>
+            </div>
+          </ng-container>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <div class="chartjs-size-monitor">
+                  <div class="chartjs-size-monitor-expand">
+                    <div class=""></div>
+                  </div>
+                  <div class="chartjs-size-monitor-shrink">
+                    <div class=""></div>
+                  </div>
+                </div>
+                <p class="card-title">Montant Dépôt / Banques</p>
+                <p class="font-weight-500">
+                  Montant total des investissements répartis entre les banques
+                </p>
+                <canvas
+                  id="BarChart"
+                  width="351"
+                  height="150"
+                  class="chartjs-render-monitor"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <div class="chartjs-size-monitor">
+                  <div class="chartjs-size-monitor-expand">
+                    <div class=""></div>
+                  </div>
+                  <div class="chartjs-size-monitor-shrink">
+                    <div class=""></div>
+                  </div>
+                </div>
+                <p class="card-title">Taux profit moyen / Banques</p>
+                <p class="font-weight-500">
+                  Le taux de profit moyen des investissements par banque
+                </p>
+                <canvas
+                  id="BarChartTaux"
+                  width="351"
+                  height="150"
+                  class="chartjs-render-monitor"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
+                    <div class="row">
+                      <div class="col-lg-6 grid-margin stretch-card" >
+                  
+                        <div class="card">
+                          <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                            
+                            <p class="card-title">Nombre de placements / Banques</p>
+                            <div style="width:200px; height:350px;">
+                              <canvas id="PieChartCountBanque"  ></canvas>
+                            </div>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                  -->
+
+
+
+        <div class="row">
+          <div class="col-md-3 stretch-card grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">Taux Profit en 2021 </p>
+
+                  <div class="me-5 mt-3">
+                    <p class="font-weight-500">Taux de profit moyen : </p>
+                    <h3 class="text-primary fs-30 font-weight-medium"> <b>12.3k</b></h3>
+                  </div>
+
+                  <div class="me-5 mt-3">
+                    <p class="font-weight-500">Taux de profit moyen pondéré : </p>
+                    <h3 class="text-primary fs-30 font-weight-medium"><b>12.3k</b></h3>
+                  </div>
+
+                </div>                
+              </div>
+            </div>
+          <div class="col-md-5 stretch-card grid-margin">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-title">Dernier taux de placement / institution financière</p>
+                <div class="charts-data">
+                  <div class="table-responsive">
+                    <table class="table table-borderless">
+                        <tr>
+                          <th class="pl-0  pb-2 border-bottom">Institutions <br> Financières</th>
+                          <th class="border-bottom pb-2">Dernièr Taux</th>
+                          <th class="border-bottom pb-2">Date du dernièr <br>Placement</th>
+                        </tr>
+                      <tbody>
+                        <tr *ngFor="let item of this.listDernierTauxPlacementParBanque"> 
+                          <td class="pl-0">{{ item.organismeLibelle}} </td>
+                          <td><p class="mb-0"><span class="font-weight-bold mr-2">{{ item.tauxProfit}}</span>%</p></td>
+                          <td class="pb-2">{{ item.dateSouscription | date: "dd/MM/yyyy" }}   </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>  
+              </div>          
+            </div>
+          </div>
+
+        <!--Pie chart-->
+        <div class="col-md-4 grid-margin row">
+          <div class="card">
+            <div class="card-body">
+              <div class="chartjs-size-monitor">
+                <div class="chartjs-size-monitor-expand">
+                  <div class=""></div>
+                </div>
+                <div class="chartjs-size-monitor-shrink"></div>
+              </div>
+              <p class="card-title">Nombre de placements / Banques</p>
+              <p class="font-weight-500">
+                Le nombre de placements répartis entre les banques
+              </p>
+              <canvas id="PieChartCountBanque" width="400" height="100" class="chartjs-render-monitor"></canvas>
+            </div>
+          </div>
+        </div>
+
+          
+        </div>
+      <br />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

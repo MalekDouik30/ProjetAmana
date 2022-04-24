@@ -1,0 +1,48 @@
+<div class="content-wrapper">      
+    <div class="row">
+        <div class="col-md-12 grid-margin">
+          <div class="row">
+              <h2 class="font-weight-bold center">Actions gratuites </h2>
+          </div>
+        </div>
+    </div>
+
+    <form class="form-sample" #monform="ngForm" (submit)="onSubmit(monform)">
+        <div class="row">
+            <div class="form-group">
+            <label>Nombre d'actions acquises</label>
+            <input type="number" class="form-control form-control-lg" disabled #nbreAction="ngModel"
+                [(ngModel)]="plaService.fromData.pla_nbr_action" name="nbreAction" required />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                <label>Nombre d'actions gratuites</label>
+                <input type="number" class="form-control form-control-lg" #nbreActionGratuite="ngModel"
+                    [(ngModel)]="plaService.fromData.pla_nbre_action_gratuite" name="nbreActionGratuite" (change)="TotalAction()" required min="0" />
+                </div>
+            </div>
+            
+                <div class="form-group">
+                <label>Total  </label>
+                <input type="number" class="form-control form-control-lg" disabled #TnbreAction="ngModel"
+                    [(ngModel)]="totalActionVar" name="TnbreAction" required />
+                </div>
+         
+        </div>
+    <div class="mt-3">
+        <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit"
+              [disabled]="monform.invalid">Confirmer</button>
+    </div>
+          
+    </form>
+    <div class="mt-3">
+        <button type="button" class="btn btn-outline-secondary btn-lg btn-block" (click)="closeDialog(monform)" >Retour</button>
+    </div>
+
+
+
+</div>
+

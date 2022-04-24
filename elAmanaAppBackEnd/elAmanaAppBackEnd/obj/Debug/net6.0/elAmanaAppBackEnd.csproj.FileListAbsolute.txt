@@ -1,0 +1,603 @@
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.json
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.exe
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.deps.json
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.runtimeconfig.json
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Humanizer.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.AssemblyReference.cache
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfoInputs.cache
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfo.cs
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CoreCompileInputs.cache
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\scopedcss\bundle\elAmanaAppBackEnd.styles.css
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CopyComplete
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\source\repos\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.genruntimeconfig.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.exe
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.deps.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.runtimeconfig.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Humanizer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.AssemblyReference.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfoInputs.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfo.cs
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CoreCompileInputs.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\scopedcss\bundle\elAmanaAppBackEnd.styles.css
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CopyComplete
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.genruntimeconfig.cache
+C:\Users\s.cherif\Documents\Demande de placement\Nouveau dossier (2)\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.AssemblyReference.cache
+C:\Users\s.cherif\Documents\Demande de placement\Nouveau dossier (2)\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s.cherif\Documents\Demande de placement\Nouveau dossier (2)\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfoInputs.cache
+C:\Users\s.cherif\Documents\Demande de placement\Nouveau dossier (2)\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfo.cs
+C:\Users\s.cherif\Documents\Demande de placement\Nouveau dossier (2)\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CoreCompileInputs.cache
+C:\Users\s.cherif\Documents\Demande de placement\Nouveau dossier (2)\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\s.cherif\Documents\Demande de placement\Nouveau dossier (2)\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\s.cherif\Documents\Demande de placement\Nouveau dossier (2)\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\Nouveau dossier (2)\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\Nouveau dossier (2)\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\libman.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.exe
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.deps.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.runtimeconfig.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Humanizer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.AssemblyReference.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfoInputs.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfo.cs
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CoreCompileInputs.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\scopedcss\bundle\elAmanaAppBackEnd.styles.css
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CopyComplete
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.genruntimeconfig.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.AssemblyReference.cache
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfoInputs.cache
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfo.cs
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CoreCompileInputs.cache
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.json
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\libman.json
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.exe
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.deps.json
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.runtimeconfig.json
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Humanizer.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\scopedcss\bundle\elAmanaAppBackEnd.styles.css
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CopyComplete
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.genruntimeconfig.cache
+<<<<<<< HEAD
+=======
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\libman.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.exe
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.deps.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.runtimeconfig.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Humanizer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.AssemblyReference.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfoInputs.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfo.cs
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CoreCompileInputs.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\scopedcss\bundle\elAmanaAppBackEnd.styles.css
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CopyComplete
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\Synchro\OneDrive - Assurances El Amana Takaful\Documents\workspace\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.genruntimeconfig.cache
+>>>>>>> 3020e110a90d5379c14fefd173624640180c2495
+C:\Users\s.cherif\Documents\Demande de placement\El_Amana_App\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\refint\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\libman.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.exe
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.deps.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.runtimeconfig.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Humanizer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.AssemblyReference.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfoInputs.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfo.cs
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CoreCompileInputs.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\scopedcss\bundle\elAmanaAppBackEnd.styles.css
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CopyComplete
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.genruntimeconfig.cache
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.json
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\libman.json
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.exe
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.deps.json
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.runtimeconfig.json
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Humanizer.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.AssemblyReference.cache
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfoInputs.cache
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfo.cs
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CoreCompileInputs.cache
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\scopedcss\bundle\elAmanaAppBackEnd.styles.css
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CopyComplete
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\refint\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.genruntimeconfig.cache
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\ElAmana\elAmanaApp\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\libman.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.exe
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.deps.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.runtimeconfig.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Humanizer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.AssemblyReference.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfoInputs.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfo.cs
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CoreCompileInputs.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\scopedcss\bundle\elAmanaAppBackEnd.styles.css
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CopyComplete
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\ref\elAmanaAppBackEnd.dll
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\m.douik\OneDrive - Assurances El Amana Takaful\Bureau\elAmanaApp\ProjetAmana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.genruntimeconfig.cache
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\appsettings.json
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\libman.json
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.exe
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.deps.json
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.runtimeconfig.json
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Humanizer.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.AssemblyReference.cache
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfoInputs.cache
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.AssemblyInfo.cs
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CoreCompileInputs.cache
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\scopedcss\bundle\elAmanaAppBackEnd.styles.css
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.csproj.CopyComplete
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\refint\elAmanaAppBackEnd.dll
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.pdb
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\elAmanaAppBackEnd.genruntimeconfig.cache
+C:\Users\s.cherif\Documents\Demande de placement\Projet_El_Amana\elAmanaAppBackEnd\elAmanaAppBackEnd\obj\Debug\net6.0\ref\elAmanaAppBackEnd.dll

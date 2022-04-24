@@ -1,0 +1,64 @@
+.card-tale{
+    background: rgb(63, 40, 48);
+}
+
+.card-tale:hover{
+    background: rgb(102, 76, 85);
+}
+
+.card-dark-blue{
+    background: #867f7f;
+}
+
+.card-dark-blue :hover{
+    background: #afa0a0;
+}
+
+.card-light-blue{
+    background: rgba(248, 155, 58,0.7);
+}
+
+.card-light-blue:hover{
+    background: rgb(248, 155, 58);
+}
+
+
+.card-light-danger{
+    background: rgba(0, 145, 97,0.7);
+}
+
+.card-light-danger:hover{
+    background: rgb(0, 145, 97);
+}
+
+.card-table2{
+    background: rgb(182,179,150);
+    color: white;
+}
+
+.card-table2:hover{
+    background: rgba(182,179,150,0.7);
+}
+
+thead{
+    color: #fff;
+    background-color: #009161;
+}
+
+td {
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+td {
+    font-size: 13px;
+    /*padding-right: 0px;
+    padding-left: 0px;*/
+}
+
+th{
+    font-size: 12px;
+}

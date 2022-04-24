@@ -1,0 +1,71 @@
+<div class="card-body">
+    <h2 class="card-title" style="text-align: center;">Ajouter Délégation</h2>
+    <!--Form-->
+    <form class="form-sample" #monform="ngForm" (submit)="onSubmit(monform)" >
+       <div class="row">
+        <div style="width: 257px;">
+        <div class="form-group">
+            <label>Type Délégatgion</label>
+            <select  (blur)="ValidateOrg(typeDelegation.value)" (change)="ValidateOrg(typeDelegation.value)"class="form-control form-control-lg"
+             [class.is-invalid]="typeDelegation.touched && OrgHasError"
+            [(ngModel)]="placementS.fromData.pla_delegation"  #typeDelegation="ngModel"  name="typeDelegation" >
+            <option value= 0 disabled >Sélectionner une délégation  </option>
+
+                <ng-container *ngFor="let item of delegS.listdelegation">
+                    <option value="{{ item.del_id}}"> {{item.del_libelle }} </option>
+                </ng-container>
+            </select>
+            <small class="text-danger" [class.d-none]="!OrgHasError || typeDelegation.untouched">
+              Le champs est obligatoire!
+
+            </small>
+        </div>
+
+       </div>
+       </div>
+       <div class="row" >
+
+     <div style="width: 257px;">
+         <div class="form-group" >
+
+             <label> Prix d'acquisition </label>
+             <input type="number" class="form-control form-control-lg" placeholder="Prix d'acquisition" #PrixA="ngModel" [(ngModel)]="placementS.fromData.pla_montant_depot"
+              name="PrixA"  pattern="^[0-9]{1,11}(?:\.[0-9]{1,3})?$" min="0" required />
+              <div class="error-msg" *ngIf="(PrixA.touched || monform.submitted) && PrixA.errors?.required">
+               Le champs est obligatoire!
+             </div>
+
+              <div class="error-msg" *ngIf="(PrixA.touched || monform.submitted) && PrixA.errors?.pattern">
+               <p>Le prix doit être 3 chiffres après la virgule </p>
+             </div>
+
+         </div>
+     </div>
+</div>
+<div class="row" >
+
+  <div style="width: 257px;" >
+      <div class="form-group" >
+
+          <label> Prix d'investisement </label>
+          <input type="number" class="form-control form-control-lg" placeholder="Prix d'investisement" #PrixI="ngModel" [(ngModel)]="placementS.fromData.pla_mont_inve"
+           name="PrixI"  pattern="^[0-9]{1,11}(?:\.[0-9]{1,3})?$" min="0" required />
+           <div class="error-msg" *ngIf="(PrixI.touched || monform.submitted) && PrixI.errors?.required">
+            Le champs est obligatoire!
+          </div>
+
+           <div class="error-msg" *ngIf="(PrixI.touched || monform.submitted) && PrixI.errors?.pattern">
+            <p>Le prix doit être 3 chiffres après la virgule </p>
+          </div>
+
+      </div>
+  </div>
+</div>
+<div class="mt-3">
+  <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit"
+    [disabled]="monform.invalid">Confirmer</button>
+              <button type="button" class="btn btn-outline-secondary btn-lg btn-block" (click)="closeDialog(monform)" >Retour</button>
+
+</div>
+      </form>
+     </div>

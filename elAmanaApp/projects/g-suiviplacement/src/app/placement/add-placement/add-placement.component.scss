@@ -1,0 +1,32 @@
+#test1 {
+    margin: -107px 19px 25px 244px;
+    flex: 0 0 50%;
+    max-width: 53%;
+  }
+    @media (max-width: 762px){
+    #test1 {
+      margin: -14px 0px -7px 0px;
+      flex: 0 0 40%;
+      max-width: 100%;
+      padding: inherit;
+    }
+    #test4-1{
+      margin: 0px 0px 24px 7px;
+    }
+    #test4-2{
+      margin: 1px 1px 1px 7px;
+    }
+
+
+
+
+}
+
+
+    input:invalid {
+      border-color: red;
+    }
+   select:invalid {
+      border-color: red;
+    }
+

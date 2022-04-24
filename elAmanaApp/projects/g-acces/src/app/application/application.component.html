@@ -1,0 +1,199 @@
+<app-header></app-header>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <app-navbar-user></app-navbar-user>
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-md-12 grid-margin">
+                        <div class="">
+                            <div class="">
+                                <div class="">
+                                    <div class="card-body">
+                                        <h1 class="card-title">Gestion des applications</h1>
+                                    </div>
+                                    <div class="input-group">
+                                        <!--search bar-->
+                                        <div class="form-group">
+                                          <div class="input-group">
+                                            <div class="input-group-prepend show">
+                                              <button
+                                                class="btn btn-sm btn-outline-primary dropdown-toggle"
+                                                type="button"
+                                                data-toggle="dropdown"
+                                                aria-haspopup="true"
+                                                aria-expanded="true"
+                                                (click)="ShowDiv('showFilterDiv')"
+                                              >
+                                                <i class="bi bi-filter"></i> Filtre
+                                              </button>
+                                            </div>
+                                            <input
+                                              type="text"
+                                              class="form-control"
+                                              (keyup)="applyFilter($event)"
+                                              placeholder="Recherche ..."
+                                              style="margin-right: 5px"
+                                              list="exampleList"
+                                            />
+                                          </div>
+                                        </div>
+                          
+                                        <!--End search bar-->
+                                        <!--Add Button : *ngIf="this.authService.listauthorizedFunctions[0]"-->
+                                        <ng-container>
+                                          <button
+                                          *ngIf="this.authService.listauthorizedFunctions[0]"
+                                            type="button"
+                                            class="btn btn-icon-text button-add"
+                                            (click)="onCreate()"
+                                          >
+                                            <i class="bi bi-clipboard-plus"></i>
+                                            Ajouter Application
+                                          </button>
+                                        </ng-container>
+                                      </div>
+                                    <!------------------------------------------------------------------------------------------------------------->
+                                    <!--Div Filter-->
+
+                                    <div class="search-filter" *ngIf="filterDiv == 'showFilterDiv'">
+                                        <form class="form-sample" #searchForm="ngForm" (submit)="search(searchForm)">
+                                            <table class="rechercheav-div">
+                                                <tr>
+                                                    <td>
+                                                        <!--Close Div-->
+                                                        <button type="button" class="close" aria-label="Close"
+                                                            (click)="ShowDiv('hiddenFilterDiv')">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <!-- Search by Libellé -->
+                                                        <label><small>Libellé</small></label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control form-control-lg"
+                                                                placeholder="Libellé" name="libelle" ngModel />
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <!-- Search by Nom -->
+                                                        <label><small>Description</small></label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control form-control-lg"
+                                                                placeholder="Description" name="description" ngModel />
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <!-- Search by Etat -->
+                                                        <label><small>Etat</small></label>
+                                                        <div class="form-group">
+                                                            <select class="form-control form-control-lg" name="etat"
+                                                                ngModel>
+                                                                <option value="true">Actif</option>
+                                                                <option value="false">Supprimée</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <!-- Search submit-->
+                                                        <div class="form-group">
+                                                            <button class="btn btn-sm btn-facebook search-button"> <i
+                                                                    class="icon-search"></i> </button>
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </form>
+                                    </div>
+
+                                    <!--End Div Filter-->
+                                    <!------------------------------------------------------------------------------------------------------------->
+                                    <!--Table-->
+                                    <p class="text-info" (click)="exportAsExcel()" > <i class="bi bi-box-arrow-left"></i>&nbsp;&nbsp;Exporter</p>
+                                    <div class="col-lg-12 grid-margin stretch-card">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <table class="table-responsive">
+                                                    <!--Table-->
+                                                    <mat-table [dataSource]="dataSource" matSort
+                                                        (matSortChange)="announceSortChange($event)"
+                                                        class="table table-striped">
+                                                        <ng-container matColumnDef="appLibelle">
+                                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Libellé
+                                                            </mat-header-cell>
+                                                            <mat-cell *matCellDef="let element" data-label="Libellé">
+                                                                {{element.appLibelle}} </mat-cell>
+                                                        </ng-container>
+
+                                                        <ng-container matColumnDef="appDescription">
+                                                            <mat-header-cell *matHeaderCellDef mat-sort-header>
+                                                                Description
+                                                            </mat-header-cell>
+                                                            <mat-cell *matCellDef="let element"
+                                                                data-label="Description"> {{element.appDescription}}
+                                                            </mat-cell>
+                                                        </ng-container>
+
+
+                                                        <ng-container matColumnDef="updateButton">
+                                                            <mat-header-cell *matHeaderCellDef> Modifier
+                                                            </mat-header-cell>
+                                                            <!--Update Button-->
+                                                            <mat-cell *matCellDef="let element" data-label="Modifier">
+                                                                <button 
+                                                                    *ngIf="this.authService.listauthorizedFunctions[1]"    
+                                                                    type="button"
+                                                                    class="btn btn-inverse-success btn-icon"
+                                                                    (click)="populateForm(element)">
+                                                                    <i class="ti-pencil-alt2"></i>
+                                                                </button>
+                                                            </mat-cell>
+                                                        </ng-container>
+
+                                                        <ng-container matColumnDef="deleteButton">
+                                                            <mat-header-cell *matHeaderCellDef> Supprimer
+                                                            </mat-header-cell>
+                                                            <mat-cell *matCellDef="let element" data-label="Supprimer">
+                                                                <!--Delete Button-->
+                                                                <button 
+                                                                    *ngIf="this.authService.listauthorizedFunctions[1]"
+                                                                    type="button"
+                                                                    class="btn btn-inverse-success btn-icon"
+                                                                    mwlConfirmationPopover
+                                                                    (confirm)="onDelete(element.appId)"
+                                                                    popoverTitle="Voulez vous supprimer cette application ?">
+                                                                    <i class="ti-close"></i>
+                                                                </button>
+                                                            </mat-cell>
+                                                        </ng-container>
+
+                                                        <mat-header-row *matHeaderRowDef="displayedColumns">
+                                                        </mat-header-row>
+                                                        <mat-row *matRowDef="let row; columns: displayedColumns;">
+                                                        </mat-row>
+                                                    </mat-table>
+                                                </table>
+
+                                                <mat-paginator [length]="100" [pageSize]="10"
+                                                    [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+                                                </mat-paginator>
+
+                                                <!--End Table-->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,446 @@
+<app-header></app-header>
+<div class="container-scroller">
+  <div class="container-fluid page-body-wrapper">
+    <app-navbar-user></app-navbar-user>
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-md-12 grid-margin">
+            <div class="card-body">
+              <h1>Gestion des utilisateurs</h1>
+            </div>
+            <div class="input-group">
+              <!--search bar-->
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend show">
+                    <button
+                      class="btn btn-sm btn-outline-primary dropdown-toggle"
+                      type="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="true"
+                      (click)="ShowDiv('showFilterDiv')"
+                    >
+                      <i class="bi bi-filter"></i> Filtre
+                    </button>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    (keyup)="applyFilter($event)"
+                    placeholder="Recherche ..."
+                    style="margin-right: 5px"
+                    list="exampleList"
+                  />
+                </div>
+              </div>
+
+              <!--End search bar-->
+              <!--Add Button -->
+              <ng-container *ngIf="this.authService.listauthorizedFunctions[0]">
+                <button
+                  type="button"
+                  class="btn btn-icon-text button-add"
+                  (click)="onCreate()"
+                >
+                <i class="bi bi-person-plus-fill"></i> 
+                  Ajouter utilisateur
+                </button>
+              </ng-container>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------->
+            <!--Div Filter-->
+            <div class="search-filter" *ngIf="filterDiv == 'showFilterDiv'">
+              <form class="form-sample" #searchForm="ngForm" (submit)="search(searchForm)"
+>
+                <table class="rechercheav-div">
+                  <tr>
+                    <td>
+                      <button
+                        type="button"
+                        class="close"
+                        aria-label="Close"
+                        (click)="ShowDiv('hiddenFilterDiv')"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!--End Close Div-->
+                    <td>
+                      <!-- Search by Nom -->
+                      <label><small>Nom</small></label>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          placeholder="Recherche par Nom"
+                          name="nom"
+                          ngModel
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <!-- Search by mail -->
+                      <label><small>E-mail </small></label>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          placeholder="Recherche par Email"
+                          name="mail"
+                          ngModel
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <!-- Search by Description -->
+                      <label><small>Description</small></label>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          placeholder="Recherche par Description"
+                          name="description"
+                          ngModel
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <label><small>Login</small></label>
+                      <div class="form-group">
+                        <!-- Search by Login -->
+                        <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          placeholder=" Recherche par Login"
+                          name="login"
+                          ngModel
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <label><small>Etat</small></label>
+                      <!-- Search by Etat -->
+                      <div class="form-group">
+                        <select
+                          class="form-control form-control-lg"
+                          name="etat"
+                          ngModel
+                        >
+                          <option value="" disabled selected>
+                            Recherche par etat
+                          </option>
+                          <option value="true">Actif</option>
+                          <option value="false">Bloquer</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td>
+                      <label><small>Type utilisateur</small></label>
+                      <!-- Search by Etat -->
+                      <div class="form-group">
+                        <select
+                        class="form-control form-control-lg"
+                        [(ngModel)]="utiService.fromData.utiTypeUtilisateur"
+                        #role="ngModel"
+                        name="typeutilisateur"
+                        aria-placeholder="Recherche par type"
+                      >
+                        <option value="" disabled selected>
+                          Recherche par Type utilisateur
+                        </option>
+                        <option
+                          *ngFor="let item of typeUtiService.listTypesUtilisateur"
+                          value="{{ item.idTypeUti }}"
+                        >
+                          {{ item.libelleTypeUti }}
+                        </option>
+                      </select>
+                      </div>
+                    </td>
+                    <td>
+                      <!-- Search by role -->
+                      <label><small>Role</small></label>
+                      <div class="form-group">
+                        <select
+                          class="form-control form-control-lg"
+                          [(ngModel)]="utiService.fromData.utiRole"
+                          #role="ngModel"
+                          name="role"
+                          aria-placeholder="Recherche par role"
+                        >
+                          <option value="" disabled selected>
+                            Recherche par role
+                          </option>
+                          <option
+                            *ngFor="let item of rolService.listrole"
+                            value="{{ item.rolId }}"
+                          >
+                            {{ item.rolLibelle }}
+                          </option>
+                        </select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="col-14 border-left-top-lg border-left-top-sm">
+                        <div class="d-flex p-2">
+                        <mat-form-field >
+                            <mat-label>Plage dates d'ajout</mat-label>
+                            <mat-date-range-input [formGroup]="rangeDateCreation" [rangePicker]="picker">
+                                <input matStartDate formControlName="start" placeholder="Date de début" >
+                                <input matEndDate formControlName="end" placeholder="Date de fin">
+                            </mat-date-range-input>
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-date-range-picker #picker></mat-date-range-picker>
+                            <mat-error *ngIf="rangeDateCreation.controls.start.hasError('matStartDateInvalid')">Date de début invalide</mat-error>
+                            <mat-error *ngIf="rangeDateCreation.controls.end.hasError('matEndDateInvalid')">Date de fin invalide</mat-error>
+                        </mat-form-field>
+                    </div>
+                    </div>
+            
+                    </td>
+                    <!--
+                    <td>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          placeholder="date debut"
+                          name="dated"
+                          onfocus="(this.type='date')"
+                          ngModel
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <label><small>Date fin</small></label>
+                      
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          placeholder="date fin"
+                          name="datef"
+                          onfocus="(this.type='date')"
+                          ngModel
+                        />
+                      </div>
+                    </td>
+                    -->
+                    <td>
+                      <div class="form-group">
+                        <button class="btn btn-sm btn-facebook search-button">
+                          <i class="icon-search"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+            <!--End Div Filter-->
+            <!------------------------------------------------------------------------------------------------------------->
+
+            <!--Table-->
+            <p class="text-info" (click)="exportAsExcel()" > <i class="bi bi-box-arrow-left"></i>&nbsp;&nbsp;Exporter</p>
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                    <table class="table-responsive">
+                      <!--Table-->
+                      <mat-table id="ExampleTable"
+                        [dataSource]="dataSource"
+                        matSort
+                        (matSortChange)="announceSortChange($event)"
+                        class="table table-striped"
+                      >
+                        <ng-container matColumnDef="utiNom">
+                          <mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Nom & Prénom
+                          </mat-header-cell>
+                          <mat-cell *matCellDef="let element" data-label="Nom">
+                            {{ element.utiNomPrenom }}
+                          </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="utiEmail">
+                          <mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Email
+                          </mat-header-cell>
+                          <mat-cell *matCellDef="let element" data-label="Email">
+                            <span class="ellipsis">
+                              {{ element.utiEmail }}
+                            </span>
+                          </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="utiDescription">
+                          <mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Description
+                          </mat-header-cell>
+                          <mat-cell
+                            *matCellDef="let element"
+                            data-label="Description"
+                          >
+                            <span class="ellipsis">
+                              {{ element.utiDescription }}
+                            </span>
+                          </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="utiLogin">
+                          <mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Login
+                          </mat-header-cell>
+                          <mat-cell *matCellDef="let element" data-label="Login">
+                            <span class="ellipsis">{{ element.utiLogin }} </span>
+                          </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="utiDateCreation">
+                          <mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Date de création
+                          </mat-header-cell>
+                          <mat-cell
+                            *matCellDef="let element"
+                            data-label="Date de création"
+                          >
+                            {{ element.utiDateCreation | date: "dd/MM/yyyy" }}
+                          </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="fonDescription">
+                          <mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Description
+                          </mat-header-cell>
+                          <mat-cell
+                            *matCellDef="let element"
+                            data-label="Description"
+                          >
+                            <span class="ellipsis">
+                              {{ element.fonDescription }}
+                            </span>
+                          </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="utiRole">
+                          <mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Role
+                          </mat-header-cell>
+                          <mat-cell *matCellDef="let element" data-label="Role">
+                            <span class="ellipsis">
+                              <ng-container
+                                *ngFor="let i of this.rolService.listrole"
+                              >
+                                <ng-container *ngIf="i.rolId == element.utiRole">
+                                  {{ i.rolLibelle }}
+                                </ng-container>
+                              </ng-container>
+                            </span>
+                          </mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="updateButton">
+                          <mat-header-cell *matHeaderCellDef>
+                            Modifier</mat-header-cell>
+                          <!--Update Button -->
+                          <mat-cell
+                            *matCellDef="let element"
+                            data-label="Modifier">
+                            <button
+                            *ngIf="this.authService.listauthorizedFunctions[2]"
+                              type="button"
+                              class="btn btn-inverse-success btn-icon"
+                              (click)="populateForm(element)"
+                            >
+                              <i class="ti-pencil-alt2"></i>
+                            </button>
+                          </mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="deleteButton">
+                          <mat-header-cell *matHeaderCellDef>
+                            Désactiver
+                          </mat-header-cell>
+                          <mat-cell
+                            *matCellDef="let element"
+                            data-label="Supprimer">
+                            <!--Delete Button : *ngIf="this.authService.listauthorizedFunctions[1]"-->
+                            <button
+                            *ngIf="this.authService.listauthorizedFunctions[1]"
+                              type="button"
+                              class="btn btn-inverse-success btn-icon"
+                              mwlConfirmationPopover
+                              (confirm)="onDelete(element.utiId)"
+                              popoverTitle="Voulez-vous supprimer cet utilisateur ?"
+                            >
+                              <i class="ti-close"></i>
+                            </button>
+                          </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="initializeButton">
+                          <mat-header-cell *matHeaderCellDef>
+                            Initialiser
+                          </mat-header-cell>
+                          <mat-cell
+                            *matCellDef="let element"
+                            data-label="Initialiser">
+                            <!-- Initialiser Button : *ngIf="this.authService.listauthorizedFunctions[3]"-->
+                            <button
+                            *ngIf="this.authService.listauthorizedFunctions[3]"
+                              type="button"
+                              class="btn btn-inverse-success btn-icon"
+                              mwlConfirmationPopover
+                              (confirm)="onInitialize(element.utiId)"
+                              popoverTitle="Voulez-vous initialiser le compte de cet utilisateur?"
+                            >
+                              <i class="bi bi-arrow-repeat"></i>
+                            </button>
+                          </mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="detailButton">
+                          <mat-header-cell *matHeaderCellDef>
+                            Détail
+                          </mat-header-cell>
+                          <mat-cell *matCellDef="let element" data-label="Détail">
+                            <!-- Initialiser Button-->
+                            <button
+                              type="button"
+                              class="btn btn-inverse-success btn-icon"
+                              (click)="onDetailUser(element)"
+                            >
+                              <i class="bi bi-eye"></i>
+                            </button>
+                          </mat-cell>
+                        </ng-container>
+
+                        <mat-header-row
+                          *matHeaderRowDef="displayedColumns"
+                        ></mat-header-row>
+                        <mat-row
+                          *matRowDef="let row; columns: displayedColumns"
+                        ></mat-row>
+                      </mat-table>
+                    </table>
+
+                  <mat-paginator
+                    [length]="100"
+                    [pageSize]="10"
+                    [pageSizeOptions]="[5, 10, 25, 100]"
+                    aria-label="Select page"
+                  >
+                  </mat-paginator>
+
+                  <!--End Table-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

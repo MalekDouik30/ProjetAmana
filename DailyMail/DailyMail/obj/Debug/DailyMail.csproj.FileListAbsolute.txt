@@ -1,0 +1,17 @@
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\bin\Debug\DailyMail.exe.config
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\bin\Debug\DailyMail.exe
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\bin\Debug\DailyMail.pdb
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\bin\Debug\System.Security.AccessControl.dll
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\bin\Debug\System.Security.Permissions.dll
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\bin\Debug\System.Security.AccessControl.xml
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\bin\Debug\System.Security.Permissions.xml
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\obj\Debug\DailyMail.ProjectInstaller.resources
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\obj\Debug\DailyMail.csproj.GenerateResource.cache
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\obj\Debug\DailyMail.csproj.CoreCompileInputs.cache
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\obj\Debug\DailyMail.exe
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\obj\Debug\DailyMail.pdb
+C:\Users\s.cherif\Documents\Demande de placement\DailyMail\DailyMail\obj\Debug\DailyMail.csproj.CopyComplete

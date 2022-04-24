@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <app-navbar-user></app-navbar-user>
+        <div class="card-body">
+         <h1> Paramètres globaux de l'application</h1> 
+          <div class="table-responsive">
+          <table class="table table-striped table-borderless">
+            <thead>
+              <tr>
+                <th>Nombre de tentatives</th>
+                <th>Mot de passe par défaut</th>
+                <th *ngIf="this.authService.listauthorizedFunctions[0]" >Modifier</th>
+              </tr>  
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of paramService.listparametres">  
+                <td> {{item.parNbeTentativeAuthentification}} </td>
+                <td> {{item.parMotPasseDefaut}} </td>
+                <td>
+                          
+                  <!--Update Button-->
+                  <button *ngIf="this.authService.listauthorizedFunctions[0]" type="button" class="btn btn-inverse-success btn-icon" (click)="onSelection(item)"> 
+                      <i class="ti-pencil-alt2"></i>
+                  </button>
+               </td>
+              </tr>  
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
+</div>
+<app-footer></app-footer>

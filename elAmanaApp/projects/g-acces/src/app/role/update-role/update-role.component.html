@@ -1,0 +1,43 @@
+<div class="card-body">
+    <h2 class="card-title">Modifier Rôle</h2>
+    <!--Form-->
+    <form class="form-sample" #monform="ngForm" (submit)="onSubmit(monform)">
+      <div class="row">
+   
+          <div class="form-group">
+            <input type="text" class="form-control form-control-lg" placeholder="Libellé Role" #nom="ngModel"
+              [(ngModel)]="roleService.fromData.rolLibelle" name="nom" required />
+            <div class="error-msg" *ngIf="(nom.touched || monform.submitted) && nom.errors?.required">
+              Le champs Libéllé est obligatoire!
+            </div>
+          </div>
+ 
+      </div>
+      <div class="row">
+      <div class="form-group">
+          <textarea type="text" class="form-control form-control-lg" id="InputDescription"
+              placeholder="Description de l'application" name ="description" #description="ngModel" [(ngModel)]="roleService.fromData.rolDescription"
+              name="description"> </textarea>
+     </div>
+    </div>
+
+    <div class="row">
+        <select class="form-control form-control-lg" [(ngModel)]="etatRole" #etat="ngModel" name="etat">
+            <option value=true>Active</option>
+            <option value=false>Supprimé</option>
+        </select>
+    </div>
+      <div class="mt-3">
+        <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit"
+          [disabled]="monform.invalid">Confirmer</button>
+      </div>
+      
+    </form>
+    <div class="mt-3">
+      <button type="button" class="btn btn-outline-secondary btn-lg btn-block" (click)="closeDialog(monform)" >Retour</button>
+    </div>
+  </div>
+  <!--EndForm-->
+  
+
+

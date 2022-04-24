@@ -1,0 +1,72 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav" id="navSideBar"> 
+                <!--li *ngIf="this.authService.listauthorizedFunctionsForNavBar[0]" class="nav-item"> <a class="nav-link" href="user">Gestion Des <br>Utilisateurs</a></li-->
+                <!--li *ngIf="this.authService.listauthorizedFunctionsForNavBar[1]" class="nav-item"> <a class="nav-link" href="role">Gestion Des Roles</a></li-->
+                <!--li *ngIf="this.authService.listauthorizedFunctionsForNavBar[2]" class="nav-item"> <a class="nav-link" href="fonction">Gestion Des <br>Fonctions</a></li-->
+                <!--li *ngIf="this.authService.listauthorizedFunctionsForNavBar[3]" class="nav-item"> <a class="nav-link" href="global-parameter">Gestion Des <br>Paramètres Globaux</a></li-->
+        <li *ngIf="this.authService.listauthorizedFunctionsForNavBar[7]" class="nav-item">
+            <a class="nav-link" href="gAcces/dashboard_utilisateur">
+                <i class="icon-bar-graph menu-icon"></i>
+            <span class="menu-title">Tableau de bord</span>
+            </a>
+        </li>
+        <li *ngIf="this.authService.listauthorizedFunctionsForNavBar[0]" class="nav-item">
+            <a class="nav-link" href="gAcces/user">
+                <i class="icon-head menu-icon"></i>            
+            <span class="menu-title">Gestion des utilisateurs</span>
+            </a>
+        </li>
+        <li *ngIf="this.authService.listauthorizedFunctionsForNavBar[1]" class="nav-item">
+            <a class="nav-link" href="gAcces/role">
+                <i class="bi bi-shield-lock menu-icon"></i>
+            <span class="menu-title">Gestion des roles</span>
+            </a>
+        </li>
+        <li *ngIf="this.authService.listauthorizedFunctionsForNavBar[2]" class="nav-item">
+            <a class="nav-link" href="gAcces/fonction">
+                <i class="bi bi-file-text menu-icon"></i>          
+            <span class="menu-title">Gestion des fonctions</span>
+            </a>
+        </li>
+        <li *ngIf="this.authService.listauthorizedFunctionsForNavBar[5]" class="nav-item">
+            <a class="nav-link" href="gAcces/module">
+            <i class="bi bi-folder menu-icon"></i>
+            <span class="menu-title">Gestion des modules</span>
+            </a>
+        </li>
+        <li *ngIf="this.authService.listauthorizedFunctionsForNavBar[4]" class="nav-item">
+            <a class="nav-link" href="gAcces/application">
+            <i class="bi bi-ui-checks-grid menu-icon"></i>
+
+            <span class="menu-title">Gestion <br> des applications</span>
+            </a>
+        </li>
+        <li class="nav-item" *ngIf="this.authService.listauthorizedFunctionsForNavBar[8]">
+            <a class="nav-link" href="gAcces/agence">
+            <i class="bi bi-building menu-icon"></i>
+            <span class="menu-title">Gestion des agences</span>
+            </a>
+        </li>
+        <li class="nav-item" *ngIf="this.authService.listauthorizedFunctionsForNavBar[7]">
+            <a class="nav-link" href="gAcces/direction">
+            <i class="bi bi-briefcase menu-icon"></i>  
+            <span class="menu-title">Gestion des directions</span>
+            </a>
+        </li>   
+        <li *ngIf="this.authService.listauthorizedFunctionsForNavBar[3]" class="nav-item">
+            <a class="nav-link" href="gAcces/global_parameter">
+                <i class="ti-settings menu-icon"></i>
+            <span class="menu-title">Gestion <br> des paramètres globaux</span>
+            </a>
+        </li> 
+        <li *ngIf="this.authService.listauthorizedFunctionsForNavBar[6]" class="nav-item">
+            <a class="nav-link" href="gAcces/historique_utilisateur">
+            <i class="bi bi-clock-history menu-icon"></i> 
+            <span class="menu-title">Historique</span>
+            </a>
+        </li>
+
+
+    </ul>
+</nav>
+  

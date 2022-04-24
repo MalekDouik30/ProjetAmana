@@ -1,0 +1,71 @@
+<app-header></app-header>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <app-navbar-user></app-navbar-user>
+            <div class="main-panel">
+                <div class="content-wrapper">      
+                    <div class="row">
+                        <div class="col-md-12 grid-margin">
+                          <div class="row">
+                            <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                              <h2 class="font-weight-bold">Tableau de bord gestion d'accès</h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+                      <div class="row">
+                        <div class="col-md-6 grid-margin stretch-card">
+
+                          <div class="middle">
+                          <div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                            <div id="divChart">
+                              <p class="text-info"> <i class="bi bi-box-arrow-left"></i>&nbsp;&nbsp;Exporter</p>
+
+                              <canvas id="myChart" ></canvas>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-md-6 grid-margin transparent">
+                          <div class="row">
+                            <div class="col-md-6 mb-4 stretch-card transparent">
+                              <div class="card card-tale">
+                                <div class="card-body">
+                                  <p class="mb-4">Totale des utilisateurs</p>
+                                  <p class="fs-30 mb-2">{{listUtilisateurs.length}}</p> 
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mb-4 stretch-card transparent">
+                              <div class="card card-dark-blue">
+                                <div class="card-body">
+                                  <p class="mb-4">Totale des rôles</p>
+                                  <p class="fs-30 mb-2">{{listroles.length}}</p> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+                              <div class="card card-light-blue">
+                                <div class="card-body">
+                                  <p class="mb-4">Totale des modules</p>
+                                  <p class="fs-30 mb-2">{{listmodules.length}}</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 stretch-card transparent">
+                              <div class="card card-light-danger">
+                                <div class="card-body">
+                                  <p class="mb-4">Totale des fonctions </p>
+                                  <p class="fs-30 mb-2">{{listfonctions.length}}</p>                          
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+    </div>
+</div>
+<app-footer></app-footer>

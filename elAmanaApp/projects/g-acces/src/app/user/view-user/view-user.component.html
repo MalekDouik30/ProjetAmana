@@ -1,0 +1,69 @@
+
+
+<div class="card">
+    <div class="card-body">
+        <p class="card-title">Détails de l'utilisateur</p>
+            <div class="col-8">
+                <img src="assets/images/bg-elAmana.png" class="user-detail" >
+                <ul class="icon-data-list">
+                    <li>
+                    <div class="d-flex">
+                        <img src="assets/images/faces/user.png" alt="Admin" width="150" class="rounded-circle">
+                        <div>
+                        <p class="text-info mb-1"> <b>Nom : </b>{{ this.utiService.fromData.utiNomPrenom }}</p>
+                        <p class="mb-0"><b>Email :</b> {{ this.utiService.fromData.utiEmail }} </p>
+                        <p class="mb-0"><b>Description :</b> {{ this.utiService.fromData.utiDescription }} </p>
+                        <p class="mb-0"><b> Login : </b>{{ this.utiService.fromData.utiLogin }}</p>
+                        <p class="mb-0"><b> Rôle  : </b>
+                           <ng-container *ngFor="let item of this.rolService.listrole">
+                               <ng-container *ngIf="item.rolId==this.utiService.fromData.utiRole">
+                                {{item.rolLibelle}}
+                               </ng-container>
+                           </ng-container>
+                        </p>
+                        <p class="mb-0" *ngIf="this.utiService.fromData.utiEtat ==true">Etat : Compte active </p>
+                        <p class="mb-0" *ngIf="this.utiService.fromData.utiEtat ==false">Etat : Compte supprimé </p>
+                                                <!--Personnel-->
+                        <ng-container *ngIf="this.utiService.fromData.utiTypeUtilisateur ==1">
+                        <p class="mb-0"><b> Type de l'utilisateur  : </b> Personnel el Amana Takaful  </p> 
+                         <p class="mb-0"><b> Matricule  : </b> {{ this.utiService.fromData.utiEmpMatricule }}  </p> 
+                          <p class="mb-0"><b> Direction  : </b>
+                                                        <ng-container *ngFor="let item of direcService.listdirection">
+                                                        <ng-container *ngIf="item.dirId == this.utiService.fromData.utiEmpIdDirection">
+                                                            {{ item.dirLibelle }}
+                                                        </ng-container>
+                                                    </ng-container>
+                                                 </p> 
+                                                </ng-container>
+                                                <!--Agent-->
+                                                <ng-container *ngIf="this.utiService.fromData.utiTypeUtilisateur ==2">
+                                                    <p class="mb-0"><b> Type de l'utilisateur  : </b> Agent  </p> 
+                                                    <p class="mb-0"><b> Agence  : </b>
+                                                        <ng-container *ngFor="let item of ageService.listagence">
+                                                        <ng-container *ngIf="item.ageId == this.utiService.fromData.utiAgeIdAgence">
+                                                            {{ item.ageLibelle }}
+                                                        </ng-container>
+                                                    </ng-container>
+                                                 </p> 
+                                                </ng-container>
+                        <small><b>Date d'inscription :</b> {{ this.utiService.fromData.utiDateCreation  | date: 'dd/MM/yyyy'}}</small>
+
+                    </div>
+                    </div>
+                    </li>
+                </ul>
+                
+            </div>
+
+    </div>
+    </div>
+    
+    
+      
+    
+    
+    
+    
+      
+    
+    

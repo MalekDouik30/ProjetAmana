@@ -1,0 +1,277 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item active" *ngIf="this.authService.listauthorizedFunctionsForNavBar[1]">
+            <a class="nav-link" href="gPlacement/dashboard_placement">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Tableau de bord</span>
+            </a>
+        </li>
+        <li class="nav-item" *ngIf="this.authService.listauthorizedFunctionsForNavBar[1]">
+            <a class="nav-link" href="gPlacement/simulateur_placement">
+                <i class="bi bi-calculator menu-icon"></i>
+                <span class="menu-title ">Simulation Placements</span>
+            </a>
+        </li>
+            <!--type placement-->
+        <ng-container *ngFor="let item of typeP.listtypeplacement" >
+            <ng-container *ngIf="item.typ_pla_id==1">
+                <li class="nav-item" *ngIf="this.authService.listauthorizedFunctionsForNavBar[0]">
+
+                    <a class="nav-link" id="{{item.typ_pla_id}}" (click)="passIdTypePlacement(item.typ_pla_id)"
+                        href="#ui-basic" data-toggle="collapse" aria-expanded="false" aria-controls="ui-basic"><i class="bi bi-cash-coin menu-icon"></i>
+
+                       <span class="menu-title">{{item.typ_pla_libelle }}</span>
+                    </a>
+                                <!--type fonds-->
+
+
+                    <ng-container *ngFor="let item of typeF.listtypefond">
+                        <ng-container *ngIf="item.typ_fon_id==1">
+                            <div class="collapse" id="ui-basic">
+                                <ul class="nav flex-column sub-menu" style="padding-left: 20px;">
+                                    <li class="nav-item">
+
+                                        <a class="nav-link" id="{{item.typ_fon_id}}"
+                                            (click)="passIdTypeFond(item.typ_fon_id)" data-toggle="collapse"
+                                            data-target="#ui-ba" style="color: white;"><i class="bi bi-people-fill menu-icon" ></i>
+                                            {{item.type_fon_libelle}}
+
+                                        </a>
+                                                                        <!--type sous placement-->
+
+                                        <ng-container *ngFor="let item of typeSousP.listtypeSplacement">
+                                            <ng-container *ngIf="item.typ_sous_pla_id==1">
+
+                                                <div class="collapse" id="ui-ba">
+                                                    <ul class="nav flex-column sub-menu" style="padding-left: 20px;">
+                                                        <li class="nav-item">
+
+                                                            <a class="nav-link" id="{{item.typ_sous_pla_id}}"
+                                                                (click)="passIdSousPlacement(item.typ_sous_pla_id)"
+                                                                href="gPlacement/placement"
+                                                                data-target="#ui-ba">
+
+                                                                {{item.typ_sous_pla_libelle }}
+
+                                                            </a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </ng-container>
+                                            <ng-container *ngIf="item.typ_sous_pla_id==2">
+                                                <div class="collapse" id="ui-ba">
+                                                    <ul class="nav flex-column sub-menu" style="padding-left: 20px;">
+                                                        <li class="nav-item">
+                                                            <!--<a class="nav-link" data-toggle="collapse" data-target="#ui-baa">
+                                    <i class="icon-layout menu-icon"></i>
+                                    <span class="menu-title">aaaaaa</span>
+                                    <i class="menu-arrow"></i>
+                                    </a>-->
+                                                            <a class="nav-link" id="{{item.typ_sous_pla_id}}"
+                                                                (click)="passIdSousPlacement(item.typ_sous_pla_id)"
+                                                                href="gPlacement/placement"
+                                                                data-target="#ui-ba">
+
+                                                                {{item.typ_sous_pla_libelle }}
+
+                                                            </a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </ng-container>
+
+                                        </ng-container>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="item.typ_fon_id==2">
+                            <div class="collapse" id="ui-basic">
+                                <ul class="nav flex-column sub-menu" style="padding-left: 20px;">
+                                    <li class="nav-item">
+
+                                        <a class="nav-link" id="{{item.typ_fon_id}}"
+                                            (click)="passIdTypeFond(item.typ_fon_id)" data-toggle="collapse"
+                                            data-target="#ui-bb"><i class="bi bi-people menu-icon"></i>
+                                            {{item.type_fon_libelle}}
+
+                                        </a>
+                                        <ng-container *ngFor="let item of typeSousP.listtypeSplacement">
+                                            <ng-container *ngIf="item.typ_sous_pla_id==3">
+
+                                                <div class="collapse" id="ui-bb">
+                                                    <ul class="nav flex-column sub-menu" style="padding-left: 20px;">
+                                                        <li class="nav-item">
+
+                                                            <a class="nav-link" id="{{item.typ_sous_pla_id}}"
+                                                                (click)="passIdSousPlacement(item.typ_sous_pla_id)"
+                                                                href="#ui-baa" data-toggle="collapse"
+                                                                data-target="#ui-baa">
+
+                                                                {{item.typ_sous_pla_libelle }}
+
+                                                            </a>
+                                                                  <!--type sous sous placement-->
+
+                                                            <ng-container
+                                                                *ngFor="let item of typeSousSousP.listtypeSSplacement">
+                                                                <ng-container *ngIf="item.type_s_sous_plac_id==1">
+                                                                    <div class="collapse" id="ui-baa">
+                                                                        <ul class="nav flex-column sub-menu"
+                                                                            style="padding-left: 20px;">
+                                                                            <li class="nav-item">
+
+                                                                                <a class="nav-link"
+                                                                                    id="{{item.type_s_sous_plac_id}}"
+                                                                                    (click)="passIdSousSousPlacement(item.type_s_sous_plac_id)"
+                                                                                     href="gPlacement/placement">
+
+                                                                                    {{item.type_s_sous_plac_libelle }}
+
+                                                                                </a>
+
+                                                                            </li>
+
+                                                                        </ul>
+                                                                    </div>
+
+                                                                </ng-container>
+                                                                <ng-container *ngIf="item.type_s_sous_plac_id==2">
+                                                                    <div class="collapse" id="ui-baa">
+                                                                        <ul class="nav flex-column sub-menu"
+                                                                            style="padding-left: 20px;">
+                                                                            <li class="nav-item">
+
+                                                                                <a class="nav-link"
+                                                                                    id="{{item.type_s_sous_plac_id}}"
+                                                                                    (click)="passIdSousSousPlacement(item.type_s_sous_plac_id)"
+                                                                                     href="gPlacement/placement">
+
+                                                                                    {{item.type_s_sous_plac_libelle }}
+
+                                                                                </a>
+
+                                                                            </li>
+
+                                                                        </ul>
+                                                                    </div>
+
+                                                                </ng-container>
+                                                            </ng-container>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </ng-container>
+                                            <ng-container *ngIf="item.typ_sous_pla_id==4">
+                                                <div class="collapse" id="ui-bb">
+                                                    <ul class="nav flex-column sub-menu" style="padding-left: 20px;">
+                                                        <li class="nav-item">
+
+                                                            <a class="nav-link" id="{{item.typ_sous_pla_id}}"
+                                                                (click)="passIdSousPlacement(item.typ_sous_pla_id)"
+                                                                href="gPlacement/placement"
+                                                                data-target="#ui-ba">
+                                                                {{item.typ_sous_pla_libelle }}
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </ng-container>
+                                        </ng-container>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </ng-container>
+
+                    </ng-container>
+                </li>
+            </ng-container>
+            <ng-container *ngIf="item.typ_pla_id==2">
+                <li class="nav-item" *ngIf="this.authService.listauthorizedFunctionsForNavBar[0]">
+
+                    <a class="nav-link" id="{{item.typ_pla_id}}" (click)="passIdTypePlacement(item.typ_pla_id)"
+                        href="#ui-basic1" data-toggle="collapse" aria-expanded="false" aria-controls="ui-basic1"> <i class="bi bi-house-fill menu-icon"></i>
+                        <span class="menu-title">{{item.typ_pla_libelle }}</span>
+                    </a>
+                    <ng-container *ngFor="let item of typeF.listtypefond">
+                        <ng-container *ngIf="item.typ_fon_id==1">
+                            <div class="collapse" id="ui-basic1">
+                                <ul class="nav flex-column sub-menu" style="padding-left: 20px;">
+                                    <li class="nav-item">
+                                        <!-- <a class="nav-link" data-toggle="collapse" data-target="#ui-ba">
+                        <i class="icon-layout menu-icon"> </i>
+                        <span class="menu-title">test</span>
+                        <i class="menu-arrow"></i>
+                        </a>-->
+                                        <a class="nav-link" href="gPlacement/placement-immoblier" id="{{item.typ_fon_id}}"
+                                            (click)="passIdTypeFond(item.typ_fon_id)" ><i
+                                                class="bi bi-people-fill menu-icon"></i>
+                                            {{item.type_fon_libelle}}
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="item.typ_fon_id==2">
+                            <div class="collapse" id="ui-basic1">
+                                <ul class="nav flex-column sub-menu" style="padding-left: 20px;">
+                                    <li class="nav-item">
+                                        <!-- <a class="nav-link" data-toggle="collapse" data-target="#ui-ba">
+                    <i class="icon-layout menu-icon"> </i>
+                    <span class="menu-title">test</span>
+                    <i class="menu-arrow"></i>
+                    </a>-->
+                                        <a class="nav-link" href="gPlacement/placement-immoblier" id="{{item.typ_fon_id}}"
+                                            (click)="passIdTypeFond(item.typ_fon_id)" ><i
+                                                class="bi bi-people menu-icon"></i>
+                                            {{item.type_fon_libelle}}
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </ng-container>
+                    </ng-container>
+                </li>
+            </ng-container>
+        </ng-container>
+
+        <li class="nav-item" *ngIf="this.authService.listauthorizedFunctionsForNavBar[1]">
+            <a class="nav-link" href="gPlacement/total_placement">
+                <i class="bi bi-currency-exchange menu-icon"></i>
+                <span class="menu-title ">Total Placements</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-controls="auth">
+              <i class="bi bi-gear menu-icon"></i>
+              <span class="menu-title">Paramétres</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li *ngIf="this.authService.listauthorizedFunctionsForNavBar[2]" class="nav-item"> <a class="nav-link" href="gPlacement/parametre_placement"> Paramétres globaux </a></li>
+                <li *ngIf="this.authService.listauthorizedFunctionsForNavBar[3]" class="nav-item"> <a class="nav-link" href="gPlacement/institutionFinanciere_placement"> Institutions financières </a></li>
+                <li *ngIf="this.authService.listauthorizedFunctionsForNavBar[4]" class="nav-item"> <a class="nav-link" href="gPlacement/intermediaire_placement"> Intérmédiaires en bourse </a></li>
+              </ul>
+            </div>
+          </li>
+
+
+
+    </ul>
+</nav>

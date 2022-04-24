@@ -1,0 +1,139 @@
+<app-header></app-header>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <app-navbar-placement></app-navbar-placement>
+            <div class="main-panel">
+                <div class="content-wrapper">      
+                    <div class="row">
+                        <div class="col-md-12 grid-margin">
+                          <div class="row">
+                            <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                              <h2 class="font-weight-bold">Gestion des intermédiaires boursiers </h2>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                              <div class="input-group">
+                                    <input
+                                    type="text"
+                                    class="form-control"
+                                    (keyup)="applyFilter($event)"
+                                    placeholder="Recherche ..."
+                                    style="margin-right: 5px"
+                                    list="exampleList"
+                                />                               
+                                <div class="input-group-append">
+                                    <button class="btn btn-sm btn-facebook" type="button">
+                                        <i class="icon-search"></i>
+                                    </button>
+                                </div>
+                              </div>
+                           </div> 
+                        <div class="col-12 col-xl-4">
+                            <div class="justify-content-end d-flex">
+                             <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                                 <ng-container>
+                                   <!--Add button-->
+                                   <button *ngIf="this.authService.listauthorizedFunctions[0]"
+                                     type="button"
+                                     class="btn btn-icon-text button-add"
+                                     (click)="onCreate()">
+                                     <i class="bi bi-cash-coin"></i>
+                                     Ajouter intermédiaires
+                                   </button>
+                                 </ng-container>
+                             </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 grid-margin">
+                    <div class="row">
+                      <div class="col-12 col-xl-8 mb-4 mb-xl-0">              
+                      </div>
+                      <div class="col-12 col-xl-4">
+                        <div class="justify-content-end d-flex">
+                          <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                            <button type="button" aria-haspopup="true" aria-expanded="true" 
+                                class="btn btn-sm btn-light bg-white save-toggle"
+                                (click)="this.exportExcel.exporterExcelWithIdTable('tbl_exporttable_to_xls','intermédiaires en bourse.xlsx')">
+                              <i class="bi bi-download"></i> Exporter
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    <!--Table-->
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table-responsive" id="tbl_exporttable_to_xls">
+                                    <!--Table-->
+                                    <mat-table [dataSource]="dataSource" matSort
+                                        (matSortChange)="announceSortChange($event)"
+                                        class="table table-striped">
+                                        <ng-container matColumnDef="inB_libelle">
+                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Libellé de l'intermédiaires en bourse
+                                            </mat-header-cell>
+                                            <mat-cell *matCellDef="let element" data-label="Code">
+                                                {{element.inB_libelle}} </mat-cell>
+                                        </ng-container>
+                                        <ng-container matColumnDef="updateButton">
+                                            <mat-header-cell *matHeaderCellDef> Modifier
+                                            </mat-header-cell>
+                                            <!--Update Button-->
+                                            <mat-cell *matCellDef="let element" data-label="Modifier">
+                                                <button 
+                                                    *ngIf="this.authService.listauthorizedFunctions[2]"    
+                                                    type="button"
+                                                    class="btn btn-inverse-success btn-icon"
+                                                    (click)="populateForm(element)">
+                                                    <i class="ti-pencil-alt2"></i>
+                                                </button>
+                                            </mat-cell>
+                                        </ng-container>
+                    
+                                        <ng-container matColumnDef="deleteButton">
+                                            <mat-header-cell *matHeaderCellDef> Supprimer
+                                            </mat-header-cell>
+                                            <mat-cell *matCellDef="let element" data-label="Supprimer">
+                                                <!--Delete Button-->
+                                                <button  *ngIf="this.authService.listauthorizedFunctions[1]"
+                                                    type="button" class="btn btn-inverse-success btn-icon"
+                                                    mwlConfirmationPopover
+                                                    (confirm)="onDelete(element.inB_id)"
+                                                    popoverTitle="Voulez vous supprimer l'intermédiaire ?">
+                                                    <i class="ti-close"></i>
+                                                </button>
+                                            </mat-cell>
+                                        </ng-container>
+                                        <mat-header-row *matHeaderRowDef="displayedColumns">
+                                        </mat-header-row>
+                                        <mat-row *matRowDef="let row; columns: displayedColumns;">
+                                        </mat-row>
+                                    </mat-table>
+                                </table>
+                                <mat-paginator [length]="100" [pageSize]="10"
+                                    [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+                                </mat-paginator>
+                                <!--End Table-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+                    
+                    
+                    

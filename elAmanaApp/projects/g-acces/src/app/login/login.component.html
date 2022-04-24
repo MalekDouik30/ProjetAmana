@@ -1,0 +1,148 @@
+<!------------------- View1 :Login Page ------------------------------------------------------->
+<div class="reset-password" *ngIf="changeView == 'loginView' ">
+  <router-outlet></router-outlet>
+  
+  <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth px-0">
+          <div class="row w-100 mx-0">
+            <div class="col-lg-4 mx-auto">
+              <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                <div class="brand-logo text-center">
+                  <img src="../assets/images/logo1.png" alt="logo">
+                </div>
+                <h4 class="text-center">Connexion</h4>
+                <form class="pt-3" #monform="ngForm" (submit) ="loginFunction(monform)">
+                  <div class="form-group">
+                    
+                    <div *ngIf="this.errorMessage" class="alert alert-danger"> {{this.errorMessage}}</div>
+                    <input type="text" class="form-control form-control-lg" placeholder="Nom d'utilisateur" name="login" required 
+                    #login="ngModel" [(ngModel)]="authService.login">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control form-control-lg" id="myInputPassword" placeholder="Mot de passe" name="password"
+                    #password="ngModel" [(ngModel)]="authService.password">
+                  </div>
+                  
+                  <div class="form-check">
+                    <label class="form-check-label text-muted">
+                      <input type="checkbox" class="form-check-input" onclick="ShowPassword()">
+                      Afficher mot de passe
+                    <i class="input-helper"></i></label>
+                  </div>
+
+
+                  <div class="mt-3">
+                      <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" >SE CONNECTER</button>
+                  </div>
+                  <div class="my-2 d-flex justify-content-between align-items-center">
+                    <div class="form-check">
+                      <!--label class="form-check-label text-muted">
+                        <input type="checkbox" class="form-check-input">
+                        Keep me signed in
+                      </label-->
+                    </div>
+                    <!--a href="#" class="auth-link text-black">Mot de passe oublié?</a-->
+                  </div>
+  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+
+    
+  </div>
+<!------------------- View2: Password Page --------------------------------------------------------->
+<div class="reset-password" *ngIf="changeView == 'ResetPasswordView' ">
+  <app-header></app-header>
+  <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper">
+          
+          <div class="container">
+              <div class="main-body">
+              
+                    <div class="row gutters-sm">
+                      <div class="col-md-4 mb-3">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                              
+                              <div class="reset-mdp">
+                                <h3>Réinitialiser votre mot de passe</h3>
+                              </div>
+                                
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="col-md-8">
+                        <div class="card mb-3">
+                          <div class="card-body">
+                             <!--Form-->
+                              <form class="form-sample" #resetPswdForm="ngForm" (submit)="changeUserPassword(resetPswdForm)"> 
+                              <div class="row"> 
+                                  
+                                <div class="col-sm-3">
+                                      <div class="changepassword-title"> 
+                                      <h5 class="mb-0">Nouveau mot de passe</h5>
+                                      </div>
+                                </div>  
+                                 
+                                  <div class="form-group">
+                                      <input type="password" class="form-control form-control-lg" placeholder="Mot de passe" #password="ngModel" [(ngModel)]="userService.fromData.utiMotPasse" 
+                                       name="password" required 
+                                      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$" >
+  
+                                      <div class="error-msg" *ngIf="(password.touched || resetPswdForm.submitted) && password.errors?.required">
+                                        Le champs mot de passe est obligatoire!
+                                      </div>
+                                      <div class="error-msg" *ngIf="(password.touched || resetPswdForm.submitted) && password.errors?.pattern">
+                                        <p>Le champs mot de passe doit commencer par une lettre contenir au moins 12 caractères, <br>à la fois des chiffres,
+                                        des lettres majuscule, minuscule et des caractères spéciaux !</p>
+                                      </div>
+                                  
+                                    </div>
+                                </div>
+                            <hr>
+                            <div class="row"> 
+                              <div class="col-sm-3">
+                                  <div class="changepassword-title"> 
+                                  <h5 class="mb-0" >Confirmer le nouveau mot de passe</h5>
+                                  </div>
+                              </div>  
+                              <div class="form-group">
+                                  <input type="password" class="form-control form-control-lg" placeholder="Confirmer le Mot de passe" #confirmpassword="ngModel" [(ngModel)]="confirmPasswordVar" 
+                                  name="confirmpassword" required >
+                              </div>
+  
+                              <div class="error-msg" *ngIf="(confirmpassword.touched || resetPswdForm.submitted) && confirmPasswordVar !== userService.fromData.utiMotPasse" >
+                                  Le champ Confirmer votre mot de passe et le champ du mot de passe doivent être identiques!                   
+                              </div>
+  
+                            </div>
+  
+                            <div class="row"> 
+                              <div class="form-group">
+                                  <div class="confirme-btn">
+                                      <button class="btn btn-sm btn-facebook" type="submit">Confirmer</button>
+                                  </div>
+                              </div>
+                            </div>
+                          </form>
+                          <!-- EndForm-->
+                      </div>
+                        </div>    
+                      </div>
+                    </div>
+                  </div>
+              </div>
+  </div>
+  </div>
+  
+  <app-footer></app-footer>
+</div>

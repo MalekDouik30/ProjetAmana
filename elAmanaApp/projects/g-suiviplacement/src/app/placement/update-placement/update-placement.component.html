@@ -1,0 +1,98 @@
+<div class="content-wrapper">      
+    <div class="row">
+        <div class="col-md-12 grid-margin">
+          <div class="row">
+              <h2 class="font-weight-bold center">Modifier Placement </h2>
+          </div>
+        </div>
+    </div>
+
+   
+    <div class="row">
+        <div class="col-md-12 grid-margin">
+            <select name="typePlacement" class="form-control form-control-lg" name="selectUpdate" #selectUpdate="ngModel" [(ngModel)]="choixUpdate" >
+                <option value=1>Racheter un placement </option>
+                <option value=2> Modifier la rénumeration </option>
+            </select>
+        </div>
+    </div>
+
+    <!--Racheter placement-->
+    <div class="row" *ngIf="choixUpdate == 1">
+        <form class="form-sample" #monform="ngForm" (submit)="onSubmit(monform)" >
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Montant rachat</label>
+                        <input type="number" class="form-control form-control-lg" placeholder="montant rachat" 
+                            name="montantRachat" #montantRachat="ngModel" [(ngModel)]="plaService.fromData.pla_montant_rachat" min="0" max="plaService.fromData.pla_montant_depot" (change)=calculRachat() />
+                    </div>
+                </div>  
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Montant avant rachat</label>
+                        <input type="number" class="form-control form-control-lg" placeholder="montant avant rachat" 
+                            name="montantAvRachat"  #montantAvRachat="ngModel" [(ngModel)]="plaService.fromData.pla_montant_avant_rachat" disabled />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Montant dépôt</label>
+                        <input type="number" class="form-control form-control-lg" placeholder="montant depot" 
+                            name="montantDepot" #montantDepot="ngModel" [(ngModel)]="plaService.fromData.pla_montant_depot" disabled />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Etat</label>
+                        <input type="text" class="form-control form-control-lg" placeholder="etat" 
+                            name="etat" #etat="ngModel" [(ngModel)]="plaService.fromData.pla_etat"  disabled />
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit"
+                    [disabled]="monform.invalid">Confirmer</button>
+            </div>
+            <div class="mt-3">
+                <button type="button" class="btn btn-outline-secondary btn-lg btn-block" (click)="closeDialog(monform)" >Retour</button>
+            </div>
+        </form>
+    </div>
+    <!--Modifier les montant de la rémunération-->
+    <div class="row" *ngIf="choixUpdate == 2">
+        <form class="form-sample" #monform="ngForm" (submit)="onSubmit(monform)" >
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Rémunération à la date du jour </label>
+                        <input type="number" class="form-control form-control-lg" name="renumerationDj"  #renumerationDj="ngModel" [(ngModel)]="plaService.fromData.pla_produits_placement_consommes_date_jour" min="0"/>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label> Rémunération à la fin du trimestre</label>
+                        <input type="number" class="form-control form-control-lg" name="renumerationT" #renumerationT="ngModel" [(ngModel)]="plaService.fromData.pla_produits_placement_consommes_trimestre_comptable" min="0"/>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label> Rémunération à la fin de la l'année</label>
+                        <input type="number" class="form-control form-control-lg" name="renumerationA" #renumerationA="ngModel" [(ngModel)]="plaService.fromData.pla_produits_placement_consommes_annee_comptable" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit"
+                    [disabled]="monform.invalid">Confirmer</button>
+            </div>
+            <div class="mt-3">
+                <button type="button" class="btn btn-outline-secondary btn-lg btn-block" (click)="closeDialog(monform)" >Retour</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>
