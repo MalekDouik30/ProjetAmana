@@ -15,7 +15,6 @@ import {AddActionGratuiteComponent} from './add-action-gratuite/add-action-gratu
 import { AuthorizationWithoutRootService } from 'projects/g-acces/src/app/services/authorization-without-root.service';
 import { OrganismeService } from '../services/organisme.service';
 import { TypeactionService } from '../services/typeaction.service';
-import { map, startWith } from 'rxjs/operators';
 import * as XLSX from "xlsx"
 import { MatTableExporterDirective, MatTableExporterModule } from 'mat-table-exporter';
 import { ExportExcel } from 'projects/shared-project/src/app/Models/ExportExcel';
@@ -178,19 +177,21 @@ export class PlacementComponent implements OnInit {
      // filter 1: Contrat Moudharba - Titre participatif - Contrat Istethmar - Emprunt obligataire
     if(idTypeAction == 0 || idTypeAction == 1 || idTypeAction == 2 || idTypeAction == 3 || idTypeAction == 4 ){
       this.typeActionPlacement=0
-      this.displayedColumns = ["pla_organisme_societe","pla_montant_depot","pla_taux_profit","pla_date_souscription","pla_date_echeance","pla_duree","pla_produits_placement_consommes_date_jour", "pla_produits_placement_consommes_trimestre_comptable","pla_produits_placement_consommes_annee_comptable","pla_etat","updateButton"];
+      this.displayedColumns = ["pla_organisme_societe","pla_montant_depot","pla_taux_profit","pla_taux_complement","pla_date_souscription","pla_date_echeance","pla_duree","pla_produits_placement_consommes_date_jour", "pla_produits_placement_consommes_trimestre_comptable","pla_produits_placement_consommes_annee_comptable","pla_etat","updateButton"];
     }
     // filter 2: Compte rémunérer
     if(idTypeAction == 5){
       this.typeActionPlacement=0
-      this.displayedColumns = ["pla_montant_depot","pla_taux_profit","pla_date_souscription","pla_etat","updateButton"];
+      this.displayedColumns = ["pla_montant_depot","pla_taux_profit","pla_taux_complement","pla_date_souscription","pla_etat","updateButton"];
     }
     // filter 3 : Action
     if(idTypeAction == 6){
+      // Action cotées
       if(this.typeActionPlacement==1){
         this.displayedColumns = ["pla_organisme_societe","nbe_action","prix_achat","pla_montant_depot",
         "pla_date_souscription","prix_jour","montant_actualise","pla_produits_placement_consommes_date_jour", "pla_produits_placement_consommes_trimestre_comptable","pla_produits_placement_consommes_annee_comptable","pla_etat","updateButton"];
       }
+      // Action non cotées
       if(this.typeActionPlacement==2){
         this.displayedColumns = ["pla_organisme_societe","pla_nbr_action","pla_prix_achat","pla_montant_depot","pla_date_souscription","pla_etat","updateButton"];
       }
@@ -201,7 +202,6 @@ export class PlacementComponent implements OnInit {
       this.displayedColumns = ["pla_montant_depot","pla_date_souscription","pla_Vliqui","pla_value_consome_annee_comptable","pla_interB","pla_etat","updateButton"];
     }
   }
-
 
   validatePlacement(id:number){
     this.plaService.fromData.pla_id = id
@@ -223,7 +223,40 @@ export class PlacementComponent implements OnInit {
     });
   }
 
+  onUpdateCalculeProfit(SelectedPlacement:placement){
+    this.plaService.fromData=  Object.assign({},SelectedPlacement);
+  
+    if(SelectedPlacement.pla_calcule_profit_avec_taux_variable==false){
+      this.plaService.fromData.pla_calcule_profit_avec_taux_variable=true
+      this.plaService.putPlacement().subscribe(
+        res=>{
+          this.plaService.refreshComponent()
+          this.toaster.success("Taux complément variable attribué au placement","Modification")
+        },
+        err => {
+          this.toaster.error("Échec d'attribué le taux complément variable au placement'","Modification")
+          console.log(err);
+        }
+      );
+    }
 
+    if(SelectedPlacement.pla_calcule_profit_avec_taux_variable==true){
+      this.plaService.fromData.pla_calcule_profit_avec_taux_variable=false
+      this.plaService.putPlacement().subscribe(
+        res=>{
+          this.plaService.refreshComponent()
+          this.toaster.success("Taux complément variable supprimer","Modification")
+        },
+        err => {
+          this.toaster.error("Échec de suppression taux complément variable","Modification")
+          console.log(err);
+        }
+      );
+    }
+    
+
+ 
+  }
 
 
 

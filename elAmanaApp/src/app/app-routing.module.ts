@@ -34,6 +34,7 @@ import { ParametreComponent } from 'projects/g-suiviplacement/src/app/parametre/
 import { InstitutionFinanciereComponent } from 'projects/g-suiviplacement/src/app/institution-financiere/institution-financiere.component';
 import { IntermediaireComponent } from 'projects/g-suiviplacement/src/app/intermediaire/intermediaire.component';
 import { TotalPlacementComponent } from 'projects/g-suiviplacement/src/app/total-placement/total-placement.component';
+import { HistoriqueRealisationComponent } from 'projects/g-suiviplacement/src/app/historique-realisation/historique-realisation.component';
 
 
 
@@ -63,7 +64,9 @@ const routes: Routes = [
   { path: 'gPlacement/parametre_placement', component:ParametreComponent,canActivate:[RoleGuard], data: {role:"afficher parametre placement" } },
   { path: 'gPlacement/institutionFinanciere_placement', component:InstitutionFinanciereComponent,canActivate:[RoleGuard], data: {role:"afficher institution financiere" } },
   { path: 'gPlacement/intermediaire_placement', component:IntermediaireComponent,canActivate:[RoleGuard], data: {role:"afficher intermediaire" } },
-  { path: 'gPlacement/total_placement', component:TotalPlacementComponent,canActivate:[RoleGuard], data: {role:"afficher intermediaire" } }
+  { path: 'gPlacement/total_placement', component:TotalPlacementComponent,canActivate:[RoleGuard], data: {role:"afficher intermediaire" } },
+  { path: 'gPlacement/histo_realisation', component:HistoriqueRealisationComponent,canActivate:[RoleGuard], data: {role:"afficher historique realisation" } }
+
 
 ];
 

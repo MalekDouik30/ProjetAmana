@@ -1,1 +1,126 @@
-<p>historique-realisation works!</p>
+<app-header></app-header>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <app-navbar-placement></app-navbar-placement>
+            <div class="main-panel">
+                <div class="content-wrapper">      
+                    <div class="row">
+                        <div class="col-md-12 grid-margin">
+                          <div class="row">
+                            <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                              <h2 class="font-weight-bold">Historique du montant total des investissements et des profits </h2>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+
+             <!--search div-->
+                 
+             <div class="row">
+                <div class="form-group col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" (keyup)="onFilter($event)" placeholder="Recherche ..." style="margin-right: 5px" list="exampleList" />                               
+                    <div class="input-group-append">
+                        <button class="btn btn-sm btn-facebook" type="button">
+                            <i class="icon-search"></i>
+                        </button>
+                    </div>
+                  </div>
+                </div>
+
+               
+                  <button *ngIf="this.authService.listauthorizedFunctions[0]" type="button" class="btn button-add2 mb-2" (click)="onCreate()">
+                    <i class="bi bi-plus-lg"></i>Ajouter
+                  </button>
+               
+              </div>
+                 <!--Export Button-->       
+                <div class="d-flex justify-content-between">
+                  <p class="card-title"></p>
+                  <button type="button" class="btn btn-sm btn-light bg-white save-toggle text-info filter-button" >
+                       <span class="export-table-text"><i class="bi bi-file-earmark-arrow-down-fill"></i> Exporter </span>
+                  </button>
+              </div>
+              <br>
+              <!--End search div-->
+              <!--Table-->
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table-responsive" id="tbl_exporttable_to_xls">
+                                    <!--Table-->
+                                    <mat-table [dataSource]="dataSource" matSort
+                                        (matSortChange)="onSort($event)"
+                                        class="table table-striped">
+                                        <ng-container matColumnDef="montantTotalDepot">
+                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Montant de dépot total
+                                            </mat-header-cell>
+                                            <mat-cell *matCellDef="let element" data-label="Dépot total">
+                                                {{ this.formatNumber.transform(element.montant_depot_histo_rea) }} </mat-cell>
+                                        </ng-container>
+                                        
+                                        <ng-container matColumnDef="profitTotal">
+                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Montant profit total
+                                            </mat-header-cell>
+                                            <mat-cell *matCellDef="let element" data-label="Code">
+                                                {{ this.formatNumber.transform(element.profit_histo_rea) }} </mat-cell>
+                                        </ng-container>
+                                        
+                                        <ng-container matColumnDef="annee">
+                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Année
+                                            </mat-header-cell>
+                                            <mat-cell *matCellDef="let element" data-label="Code">
+                                                {{element.annee_histo_rea}} </mat-cell>
+                                        </ng-container>
+                                        
+                                        <ng-container matColumnDef="updateButton">
+                                            <mat-header-cell *matHeaderCellDef> Modifier
+                                            </mat-header-cell>
+                                            <!--Update Button-->
+                                            <mat-cell *matCellDef="let element" data-label="Modifier">
+                                                <button 
+                                                    *ngIf="this.authService.listauthorizedFunctions[2]"    
+                                                    type="button"
+                                                    class="btn btn-inverse-success btn-icon"
+                                                    (click)="onSelected(element)">
+                                                    <i class="ti-pencil-alt2"></i>
+                                                </button>
+                                            </mat-cell>
+                                        </ng-container>
+                    
+                                        <ng-container matColumnDef="deleteButton">
+                                            <mat-header-cell *matHeaderCellDef> Supprimer
+                                            </mat-header-cell>
+                                            <mat-cell *matCellDef="let element" data-label="Supprimer">
+                                                <!--Delete Button-->
+                                                <button  *ngIf="this.authService.listauthorizedFunctions[1]"
+                                                    type="button" class="btn btn-inverse-success btn-icon"
+                                                    mwlConfirmationPopover
+                                                    (confirm)="onDelete(element)"
+                                                    popoverTitle="Voulez vous supprimer cette ligne ?">
+                                                    <i class="ti-close"></i>
+                                                </button>
+                                            </mat-cell>
+                                        </ng-container>
+                                        <mat-header-row *matHeaderRowDef="displayedColumns">
+                                        </mat-header-row>
+                                        <mat-row *matRowDef="let row; columns: displayedColumns;">
+                                        </mat-row>
+                                    </mat-table>
+                                </table>
+                                <mat-paginator [length]="100" [pageSize]="10"
+                                    [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+                                </mat-paginator>
+                                <!--End Table-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+                    
+                    
+                    

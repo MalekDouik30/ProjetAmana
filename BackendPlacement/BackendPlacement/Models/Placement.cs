@@ -63,6 +63,8 @@ namespace BackendPlacement.Models
         public double? pla_montant_avant_rachat { get; set; }
         public int? pla_nbre_action_gratuite { get; set; }
         public int? pla_emprunt_hypothese_2 { get; set; }
+        public double? pla_taux_complement { get; set; }
+        public bool? pla_calcule_profit_avec_taux_variable { get; set; }
 
     }
 }

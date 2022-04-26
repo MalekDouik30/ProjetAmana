@@ -8,10 +8,10 @@ import { TypesousplacementService } from '../services/typesousplacement.service'
 import { TypesoussousplacementService } from '../services/typesoussousplacement.service';
 import { TypeactionService } from '../services/typeaction.service';
 import { OrganismeService } from '../services/organisme.service';
-import { MatTableDataSource } from '@angular/material/table';
 import { FormatNumberPipe } from 'projects/shared-project/src/app/Models/FormatNumber';
 import { ExportExcel } from 'projects/shared-project/src/app/Models/ExportExcel';
 import { DetailsEmpService } from '../services/details-emp.service';
+import { HistoriqueRealisationService } from '../services/historique-realisation.service';
 
 @Component({
   selector: 'app-dashboard-placement',
@@ -63,15 +63,20 @@ export class DashboardPlacementComponent implements OnInit {
   totalRemunerationAnneeComptableTableau = 0
   totaleInteretBanqueTableau=0
 
-  //Table
-  dataSource:MatTableDataSource<any>;
-
   // For Barchart3
   listNomEntrepriseCotes:string[]=[]
   listPrixJour:number[]=[]
   listPrixAchat:number[]=[]
 
+  // Taux Profit
   listDernierTauxPlacementParBanque:any[]=[]
+  tauxProfitMoyen=0
+  tauxProfitPondere=0
+
+  // Historique realisation
+  totalMontantDepot=0
+  totalMontantProfit=0
+
 
   changeView="";
 
@@ -84,6 +89,7 @@ export class DashboardPlacementComponent implements OnInit {
     public typeActionService:TypeactionService,
     public organismeService:OrganismeService,
     public detailEmpService:DetailsEmpService,
+    public histoService:HistoriqueRealisationService,
     public formatNumber:FormatNumberPipe,
     public exportExcel:ExportExcel
    ) { }
@@ -107,153 +113,13 @@ export class DashboardPlacementComponent implements OnInit {
 
    this.getMontantNbeTotalePlacement();
    this.getAction();
-   this. getDetailPlacementFinancier();
+   this.getDetailPlacementFinancier();
    this.getDetailPlacementImmobilier();
-   this.totalRemunerationJourTriAnn();
-
-
-
-
-
+   this.calculateTauxProfit();
+   this.getHistoriqueRealisation()
    }
-
-  /*
-   countSumPlacement(typePlacementId:number,typeFond:number,typeSousPlacement:number,
-    typeSousSousPlacement:number,typeAction:number){
-
-      this.listPlacement=[]
-      this.displayedColumns=[]
-      this.displayedRowsSelected=""
-
-      this.placementService.getPlacementResolver().subscribe(
-        res=>{
-          for(let item of res){
-            if(typePlacementId == item.pla_id_typ_placement && typeFond == item.pla_id_fonds){
-                if(typeSousPlacement == item.pla_id_sous_placement){
-                  if(typeAction==0 && typeSousSousPlacement ==0 &&  item.pla_id_type_action!=6 &&  item.pla_id_type_action!=7){
-                    this.displayedColumns = ["Institution Financière","Montant Dépot","Taux Profit %","Date Souscription","Date d'échance","Durée (année)",
-                    "P.P.C à la date du jour", "P.P à la fin du trimestre comptable","P.P à la fin de l'année comptable"];
-
-                    this.listPlacement.push(item)
-                    this.displayedRowsSelected="Action1-5"
-
-                  }
-                  if(typeAction!=0 && typeSousSousPlacement ==0){
-                    if(typeAction == item.pla_id_type_action && typeAction !=7){
-                    this.displayedColumns = ["Société","Nombre d'action","Prix d'achat","pla_montant_depot","Montant investi","Date d'achat","Prix du jour",
-                    "Prix d'achat", "Montant actualisé","+/-Value consommés à la date du jour","+/- Value à la fin du trimestre comptable","+/- Value à la fin de l'année comptable"];
-                      this.listPlacement.push(item)
-                      this.displayedRowsSelected="Action7"
-
-                    }
-                    if(typeAction == item.pla_id_type_action && typeAction ==7){
-                      this.displayedRowsSelected="Action8"
-                      this.listPlacement.push(item)
-                      this.displayedColumns = ["Montant","Date d'acquisition","Valeur liquidative","+/- Value à la fin de l'année comptable"];
-                    }
-
-                  }
-                  if(typeAction==0 && typeSousSousPlacement !=0){
-                    if(typeSousSousPlacement == item.pla_id_sous_sous_placement){
-                      this.listPlacement.push(item)
-                      this.displayedRowsSelected="ActionSousSousPlacement"
-                    }
-                  }
-              }
-              if(typeSousPlacement != item.pla_id_sous_placement){
-                // Placement Immobilier
-                this.displayedRowsSelected="ActionImmobilier"
-                this.displayedColumns = ["Délégation","Prix d'acquisition","Codification"]
-                this.listPlacement.push(item)
-              }
-
-
-            }
-          }
-          console.log(this.listPlacement)
-          //
-        })
-    }
-
-    */
-
-
-  /*
-   countSumPlacementByAction(typePlacementId:number,typeFond:number,typeSousPlacement:number,
-    typeSousSousPlacement:number,typeAction:number){
-
-      let count=0
-      let sumMontant=0
-      let listAction:number[]=[]
-      let listSSPlacement:number[]=[]
-
-    this.placementService.getPlacementResolver().subscribe(
-      res=>{
-        for(let item of res){
-
-          if(typePlacementId == item.pla_id_typ_placement && typeFond == item.pla_id_fonds && typeSousPlacement == item.pla_id_sous_placement){
-              count = count + 1
-              sumMontant = sumMontant + item.pla_montant_depot
-              if(typeAction==0 && typeSousSousPlacement ==0){
-               // l'utilisateur à clicqué sur type sous placement
-               // Détecter dynamiquement les differentes actions
-
-               if(!listAction.includes(item.pla_id_type_action)){
-                listAction.push(item.pla_id_type_action)
-               }
-              }
-
-              if(typeAction==0 && typeSousSousPlacement !=0){
-                alert("VVVVVVVVVV")
-                // l'utilisateur à clicqué sur type sous sous placement donc il veux avoir tous les actions correspondant à ce sous sous placement
-                // Détecter dynamiquement les differentes actions
-                if(!listAction.includes(item.pla_id_type_action)){
-                 listAction.push(item.pla_id_type_action)
-                }
-               }
-          }
-        }
-        // Displaying Action in dashbord
-         if(listAction.length > 0){
-          let libelleAction:string[]=[]
-          let countByAction:number[]=[]
-          let sumByAction:number[]=[]
-
-            for (let item of listAction ){
-              for(let item2 of this.typeActionService.listaction){
-                 if(item == item2.typ_act_id){
-                   libelleAction.push(item2.typ_act_libelle)
-                  }
-              }
-              let count=0
-              let sum=0
-              for(let item3 of res){
-                if(item == item3.pla_id_type_action){
-                  count=count+1
-                  sum=sum+item3.pla_montant_depot
-                }
-              }
-              countByAction.push(count)
-              sumByAction.push(sum)
-            }
-            console.log("*******************************************")
-            console.log("CountFunction")
-            console.log(libelleAction)
-            console.log(countByAction)
-            console.log(sumByAction)
-            console.log("*******************************************")
-
-            }
-      },
-
-      err=>{
-        console.log(console.error());
-      }
-    );
-   }
-  */
-
-   /***************************************************************** */
+  
+   
    getMontantNbeTotalePlacement(){
     let listTypePlacementId:number[]=[]
     let listPlacementBanqueId:number[]=[];
@@ -293,8 +159,7 @@ export class DashboardPlacementComponent implements OnInit {
           }
           this.organismeService.getOrganismeResolver().subscribe(
             res3=>{
-       
-          // continuite de 3
+              // continuite de 3
           for(let item of listPlacementBanqueId){
 
             for(let item3 of res3){
@@ -302,8 +167,7 @@ export class DashboardPlacementComponent implements OnInit {
                   if(!this.listBanqueLibelle.includes(item3.org_libelle)){
                     this.listBanqueLibelle.push(item3.org_libelle)
                   }
-                }
-              
+                } 
             }
 
             let count =0
@@ -623,190 +487,59 @@ export class DashboardPlacementComponent implements OnInit {
         )
       }
     )
-
   }
+
     getTodayDate():Date{
       let myDate = new Date();
       return myDate
-    }
-    calculateDiff(dateSouscription:string,currentDate:Date){
-      let date = new Date(dateSouscription);
-      let days = Math.floor(( date.getTime() - currentDate.getTime()) / 1000 / 60 / 60 / 24);
-      return days;
-    }
-
-    calculeRenumerationAvecNbeJours(nbeJour :number,tauxProfit:number,montantDepot:number,nbeJourAnnee:number){
-      let resultat = (((tauxProfit/100) * montantDepot) /nbeJourAnnee)*nbeJour
-      return resultat
-    }
-
-    totalRemunerationJourTriAnn(){
-      // Trimestre
-      let trimestresComptable = [
-        this.getTodayDate().getFullYear()+"/3/31",
-        this.getTodayDate().getFullYear()+"/6/30",
-        this.getTodayDate().getFullYear()+"/9/30",
-        this.getTodayDate().getFullYear()+"/12/31"]
-        let getDifferenceDates=[]
-
-      // Annee
-      let anneeComptable=this.getTodayDate().getFullYear()+"/12/31"
-
-        // Trimestre
-      for(let item of trimestresComptable){
-        if(this.calculateDiff(item,this.getTodayDate())>=0){
-          getDifferenceDates.push(this.calculateDiff(item,this.getTodayDate()))
-        }
-      }
-        let nbeJourjoursTrimestreProchain = getDifferenceDates.reduce((a, b)=>Math.min(a, b));
-        let nbeJourAnneeProchainne = this.calculateDiff(anneeComptable,this.getTodayDate())
-
-        this.placementService.getPlacementResolver().subscribe(
-          res=>{
-            let nbejour=0
-            for(let item of res){
-              if(this.calculateDiff(item.pla_date_echeance,this.getTodayDate())>0){
-              nbejour = Math.abs(this.calculateDiff(item.pla_date_souscription,this.getTodayDate()))
-              this.varTotalRemunerationDateDuJour = this.varTotalRemunerationDateDuJour + this.calculeRenumerationAvecNbeJours(nbejour,item.pla_taux_profit,item.pla_montant_depot,365)
-              this.varTotalRemunerationTrimestre  =  this.varTotalRemunerationTrimestre + this.calculeRenumerationAvecNbeJours(nbeJourjoursTrimestreProchain,item.pla_taux_profit,item.pla_montant_depot,365)
-              this.varTotalRemunerationAnnee = this.varTotalRemunerationAnnee + this.calculeRenumerationAvecNbeJours(nbeJourAnneeProchainne,item.pla_taux_profit,item.pla_montant_depot,365)
-            }
-            }
-
-            this.varTotalRemunerationTrimestre =  this.varTotalRemunerationDateDuJour+ this.varTotalRemunerationTrimestre
-            this.varTotalRemunerationAnnee = this.varTotalRemunerationDateDuJour +  this.varTotalRemunerationAnnee
-          }
-        )
-    }
-    getPlacementByType(typePlacementId:number,typeFond:number,typeSousPlacement:number,
-      typeSousSousPlacement:number,typeAction:number){
-        this.listPlacement=[]
-        this.displayedColumns = []
-        this.placementService.getPlacementResolver().subscribe(
-          res=>{
-            if(typeAction == 5){
-              // Compte rémunéré
-              this.displayedColumns = ["Etablissement","Placements","Date Souscriptions","Taux d'intérêt %","Fonds","Nature","Montant dépot"];
-            }
-            if(typeAction == 6){
-              // Action
-              this.displayedRowsSelected ="AffichageParTypePlacementAction6"
-              this.placementService.getPlacementResolverAction()
-              this.displayedColumns = ["Etablissement","Placements","Date d'achat","Prix d'achat","Prix du jour","Montant dépot","Fonds","Nature"
-              ,"Value consommés à la date du jour"];
-
-            }
-            if(typeAction == 7){
-              //FCPR
-              this.displayedRowsSelected ="AffichageParTypePlacementAction7"
-              this.displayedColumns = ["Montant","Date d'acquisition","Valeur liquidative",
-              "Value à la fin l'année comptable"]
-            }
-            if(typeAction == 1 || typeAction == 2 || typeAction == 3 ){
-              this.displayedRowsSelected ="AffichageParTypePlacementAction1-3"
-              this.displayedColumns = ["Etablissement","Placements","Date Souscriptions","Date d'échéance","Durée du Placement","Taux d'intérêt %","Fonds","Nature",
-                    "Montant dépot","Value consommés à la date du jour","Value à la fin du trimestre comptable"," Value à la fin de l'année comptable"];
-            }
-
-            if(typePlacementId == 2){
-              // Placement Immobilier
-              this.displayedRowsSelected ="AffichageParTypePlacementImmoblier"
-              this.displayedColumns = ["Placements","Date Souscriptions","Fonds","Montant dépot","Prix d'investisement"];
-            }
-
-            for(let item of res){
-              if(typeAction == 4){
-                // Emprunt Obligataire
-                this.displayedRowsSelected ="AffichageParTypePlacementAction4"
-                this.displayedColumns = ["Etablissement","Placements","Date Souscriptions","Date d'échéance","Durée du Placement","Taux d'intérêt %","Fonds","Nature",
-                "Montant dépot","Hypothèse"];
-
-                this.detailEmpService.getDetailsEmpResolver().subscribe(
-                  res2=> {
-                    let count=0
-                    for(let i of res2){
-                      if(i.pla_id == item.pla_id){
-                        item.pla_action_cotee=2 // Ghacha dans l'affichage de: hypothese 1 ou 2 du Emprunts obligataires
-                        count=count+1
-                        this.displayedColumns.push("Rénumération année "+count)
-                      }else{
-                        item.pla_action_cotee=1 // Ghacha dans l'affichage de: hypothese 1 ou 2 du Emprunts obligataires
-                      }
-                    }
-                  }
-                )
-              }
-              if( typePlacementId== item.pla_id_typ_placement && item.pla_id_fonds==typeFond && typeSousPlacement == item.pla_id_sous_placement &&
-                typeSousSousPlacement == item.pla_id_sous_sous_placement && item.pla_id_type_action == typeAction){
-                  this.listPlacement.push(item)
-              }
-            }
-          }
-        )
-      }
-
-    selectedFilterTable(){
-      this.listPlacement=[]
-      this.displayedColumns=[]
-      this.totaleMontantDepotTableau =  0
-      this.totalRemunerationDateJourTableau=0
-      this.totalRemunerationTrimestreComptableTableau=0
-      this.totalRemunerationAnneeComptableTableau = 0
-      this.totaleInteretBanqueTableau=0
-
-      if(this.searchDisplayingFilter == 1){
-
-        this.displayedRowsSelected="AffichageParTypePlacement"
-
-        const myArray = this.typePlacement.split("+")
-        let typePlacementId=Number(myArray[0])
-        let typeFondId = Number(myArray[1])
-        let typeSousPlacementId = Number(myArray[2])
-        let typeSousSousPlacementId = Number(myArray[3])
-        let typeActionId =Number(myArray[4])
-
-
-        console.log("Type Placement :"+typePlacementId)
-        console.log("Type Fonds :"+typeFondId)
-        console.log("Type Sous Placement :"+ typeSousPlacementId)
-        console.log("Type Sous sous Placement :" + typeSousSousPlacementId)
-        console.log("Type Action Placement :"+ typeActionId)
-        console.log("-------------------------------")
-
-        this.getPlacementByType(typePlacementId,typeFondId,typeSousPlacementId,
-          typeSousSousPlacementId,typeActionId)
-      }
-
-      if(this.searchDisplayingFilter == 2 && this.institutionFinanciereSelected!=0 ){
-        this.placementService.getPlacementResolver().subscribe(
-          res=>{
-            for(let item of res){
-              if(this.institutionFinanciereSelected == item.pla_organisme_societe){
-
-                this.totaleMontantDepotTableau =  this.totaleMontantDepotTableau + item.pla_montant_depot
-                this.totalRemunerationDateJourTableau=this.totalRemunerationDateJourTableau + item.pla_produits_placement_consommes_date_jour
-                this.totalRemunerationTrimestreComptableTableau=this.totalRemunerationTrimestreComptableTableau + item.pla_produits_placement_consommes_trimestre_comptable
-                this.totalRemunerationAnneeComptableTableau = this.totalRemunerationAnneeComptableTableau + item.pla_produits_placement_consommes_annee_comptable
-                this.totaleInteretBanqueTableau=this.totaleInteretBanqueTableau + item.pla_taux_profit
-
-                this.listPlacement.push(item)
-                this.displayedRowsSelected="AffichageParInstitutionFinanciere"
-                this.displayedColumns = ["Etablissement","Placements","Date Souscriptions","Date d'échéance","Durée du Placement","Taux d'intérêt %","Fonds","Nature",
-                  "Montant dépot","Value consommés à la date du jour","Value à la fin du trimestre comptable"," Value à la fin de l'année comptable"];
-              }
-            }
-          }
-        )
-      }
     }
 
    changeViewCard(viewPlacement:string){
     this.changeView=viewPlacement
   }
 
-  calculeTauxRemuneration(){
+  calculateTauxProfit(){
+    // Fonction pour calculer les differnts taux de profit
+    let totalDepot=0
+    let sommeMontantxTaux=0
+    let count=0
+    this.placementService.getPlacementResolver().subscribe(
+      res=>{
+        for(let item of res){
+          let dateSouscription = new Date(item.pla_date_souscription)
+          if(dateSouscription.getFullYear() == this.getTodayDate().getFullYear()-1 ){
+            this.tauxProfitMoyen= this.tauxProfitMoyen+item.pla_taux_profit
+            totalDepot = totalDepot+item.pla_montant_depot
+            sommeMontantxTaux=sommeMontantxTaux + (item.pla_montant_depot * item.pla_taux_profit)
+            count =count+1
+          }
+        }
+        this.tauxProfitMoyen = this.tauxProfitMoyen/count
+        this.tauxProfitPondere = sommeMontantxTaux / totalDepot
+      }
+    )
+  }
+
+  getHistoriqueRealisation(){
+    this.histoService.getHistoRealisationResolver().subscribe(
+      res=>{
+        for(let item of res ){
+          if(Number(item.annee_histo_rea) == this.getTodayDate().getFullYear()-1){
+            this.totalMontantDepot=item.montant_depot_histo_rea
+            this.totalMontantProfit=item.profit_histo_rea
+          }
+        }
+      }
+    )
+  }
+
+  CalculateTauxDeRealisation(){
     
   }
+
+
+
+
 
 
 

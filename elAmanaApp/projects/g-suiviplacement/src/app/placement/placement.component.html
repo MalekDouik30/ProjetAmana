@@ -10,7 +10,6 @@
                 <h1>Gestion des placements</h1>
 
                   <!--search div-->
-                 
                   <div class="form-row">
                     <div class="form-group col-md-4">
                       <select class="form-control" [(ngModel)]="typeAction" name="typePlacement" (change)="selectFilter()">
@@ -72,14 +71,29 @@
                                             {{this.formatNumber.transform(element.pla_montant_depot) }}
                                           </mat-cell>
                                     </ng-container>
+
                                         <ng-container matColumnDef="pla_taux_profit">
-                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Taux de profit
+                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Taux de profit (%)
                                             </mat-header-cell>
                                             <mat-cell *matCellDef="let element"
-                                                data-label="Taux Profit"> {{element.pla_taux_profit}}
+                                                data-label="Taux Profit (%) "> {{element.pla_taux_profit}}
                                             </mat-cell>
+                                        </ng-container>
 
-                                            </ng-container>
+                                        <ng-container matColumnDef="pla_taux_complement">
+                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Taux complément <br> variable (%)</mat-header-cell>
+                                            <mat-cell *matCellDef="let element"
+                                                data-label="Taux de complément"> {{element.pla_taux_complement}}
+                                            
+                                               
+                                                  <mat-checkbox class="checkBox-taux-complement" color="warn" [checked]="element.pla_calcule_profit_avec_taux_variable" (change)="onUpdateCalculeProfit(element)"> </mat-checkbox>
+                                             
+
+                                              </mat-cell>
+
+
+
+                                        </ng-container>
 
                                         <ng-container matColumnDef="pla_date_souscription">
                                           <mat-header-cell *matHeaderCellDef mat-sort-header> Date Souscription
@@ -121,7 +135,7 @@
                                         </ng-container>
 
                                         <ng-container matColumnDef="pla_produits_placement_consommes_trimestre_comptable">
-                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Produit à la fin du trimestre comptable
+                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Produit à la fin du trimestre
                                             </mat-header-cell>
                                             <mat-cell *matCellDef="let element"
                                                 data-label="Produit à la fin du trimestre comptable"> {{this.formatNumber.transform(element.pla_produits_placement_consommes_trimestre_comptable) }}
@@ -129,7 +143,7 @@
                                         </ng-container>
 
                                         <ng-container matColumnDef="pla_produits_placement_consommes_annee_comptable">
-                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Produit fin de l'année comptable
+                                            <mat-header-cell *matHeaderCellDef mat-sort-header> Produit fin de l'année
                                             </mat-header-cell>
                                             <mat-cell *matCellDef="let element"
                                                 data-label="Produit fin de l'année comptable"> {{ this.formatNumber.transform(element.pla_produits_placement_consommes_annee_comptable) }}
@@ -147,6 +161,7 @@
                               </ng-container>
                               <!-- Tableau 2: Compte rémunérer ---------------------------------------------------------------------------->
                               <ng-container *ngIf="typeAction ==5"> 
+                                
                                 <ng-container matColumnDef="pla_montant_depot">
                                   <mat-header-cell *matHeaderCellDef mat-sort-header> Montant Dépot
                                     </mat-header-cell>
@@ -154,13 +169,26 @@
                                         {{this.formatNumber.transform(element.pla_montant_depot) }}
                                       </mat-cell>
                                 </ng-container>
+                                
                                 <ng-container matColumnDef="pla_taux_profit">
-                                        <mat-header-cell *matHeaderCellDef mat-sort-header> Taux de profit
-                                        </mat-header-cell>
-                                        <mat-cell *matCellDef="let element"
-                                            data-label="Taux Profit"> {{element.pla_taux_profit}}
-                                        </mat-cell>
-                                  </ng-container>
+                                  <mat-header-cell *matHeaderCellDef mat-sort-header> Taux de profit (%)
+                                    </mat-header-cell>
+                                      <mat-cell *matCellDef="let element" data-label="Taux Profit (%)"> {{element.pla_taux_profit}}
+                                      </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="pla_taux_complement">
+                                  <mat-header-cell *matHeaderCellDef mat-sort-header> Taux de complément  <br> variable (%)
+                                  </mat-header-cell>
+                                  <mat-cell *matCellDef="let element"
+                                      data-label="Taux de complément"> {{element.pla_taux_complement}}
+
+                                      <mat-checkbox class="checkBox-taux-complement" color="warn" [checked]="element.pla_calcule_profit_avec_taux_variable" (change)="onUpdateCalculeProfit(element)"> </mat-checkbox>
+
+                                  </mat-cell>
+
+                                </ng-container>
+
                                 <ng-container matColumnDef="pla_date_souscription">
                                       <mat-header-cell *matHeaderCellDef mat-sort-header> Date Souscription
                                       </mat-header-cell>
@@ -176,7 +204,8 @@
                                       data-label="Etat"> {{ element.pla_etat }}
                                   </mat-cell>
                               </ng-container>
-                              </ng-container>
+
+                            </ng-container>
 
                               <ng-container *ngIf="typeAction ==6"> 
                                 <ng-container *ngIf="typeActionPlacement ==1"> 
@@ -246,7 +275,7 @@
                                 </ng-container>
 
                                 <ng-container matColumnDef="pla_produits_placement_consommes_trimestre_comptable">
-                                  <mat-header-cell *matHeaderCellDef mat-sort-header> Produit à la fin du trimestre comptable
+                                  <mat-header-cell *matHeaderCellDef mat-sort-header> Produit à la fin du trimestre 
                                   </mat-header-cell>
                                   <mat-cell *matCellDef="let element"
                                       data-label="Produit à la fin du trimestre comptable"> {{ this.formatNumber.transform(element.pla_produits_placement_consommes_trimestre_comptable) }}
@@ -254,7 +283,7 @@
                                 </ng-container>
 
                                 <ng-container matColumnDef="pla_produits_placement_consommes_annee_comptable">
-                                  <mat-header-cell *matHeaderCellDef mat-sort-header> Produit à la fin de l'année comptable
+                                  <mat-header-cell *matHeaderCellDef mat-sort-header> Produit à la fin de l'année 
                                   </mat-header-cell>
                                   <mat-cell *matCellDef="let element"
                                       data-label="Produit à la fin de l'année comptable"> {{ this.formatNumber.transform(element.pla_produits_placement_consommes_annee_comptable) }}
@@ -352,7 +381,7 @@
                             </ng-container>
 
                             <ng-container matColumnDef="pla_value_consome_annee_comptable">
-                              <mat-header-cell *matHeaderCellDef mat-sort-header>Produit fin de l'année comptable
+                              <mat-header-cell *matHeaderCellDef mat-sort-header>Produit fin de l'année
                               </mat-header-cell>
                               <mat-cell *matCellDef="let element"
                                   data-label="Produit fin de l'année comptable"> {{this.formatNumber.transform(element.pla_produits_placement_consommes_annee_comptable) }}

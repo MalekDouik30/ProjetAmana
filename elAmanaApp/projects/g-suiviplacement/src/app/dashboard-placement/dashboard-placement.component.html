@@ -29,16 +29,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <!--
-                            <div class="col-md-6 mb-4 stretch-card transparent">
-                              <div class="card card-dark-blue">
-                                <div class="card-body">
-                                  <p class="mb-4"></p>
-                                </div>
-                              </div>
-                            </div>
-                            -->
+              </div>                 
             </div>
 
             <div class="row">
@@ -91,25 +82,25 @@
               </div>
             </div>
           </div>
-
           <!--Profit ppc jour / ppc fin année comptable / ppc fin trimestre comptable-->
-
           <div class="col-md-6 grid-margin transparent">
             <div class="row">
               <div class="col-md-12 mb-4 stretch-card transparent">
                 <div class="card card-table2">
                   <div class="card-body" (click)="changeViewCard('')">
                     <p class="mb-4">
-                      Total rémunération des placements financiers à la date du
-                      jour : <b> {{ getTodayDate() | date: "dd/MM/yyyy" }}</b>
+                      Total rémunération des placements financiers le: <b> {{ getTodayDate() | date: "dd/MM/yyyy" }}</b>
                     </p>
                     <p class="fs-40 mb-2">
+                      <br>
+                    </p>
+                    <p>
                       {{
                         this.formatNumber.transform(this.varTotalRemunerationDateDuJour )
                       }}
                       DT
                     </p>
-                    <br />
+                  
                   </div>
                 </div>
               </div>
@@ -124,6 +115,9 @@
                       prochain <b>trimestre comptable</b>.
                     </p>
                     <p class="fs-40 mb-2">
+               
+                    </p>
+                    <p>
                       {{ this.formatNumber.transform(this.varTotalRemunerationTrimestre ) }}
                       DT
                     </p>
@@ -138,6 +132,9 @@
                       la <b>l'année comptable</b>
                     </p>
                     <p class="fs-40 mb-2">
+                  
+                    </p>
+                    <p>
                       {{ this.formatNumber.transform(this.varTotalRemunerationAnnee ) }} DT
                     </p>
                   </div>
@@ -147,7 +144,6 @@
           </div>
 
           <!-- END Profit ppc jour / ppc fin année comptable / ppc fin trimestre comptable-->
-
           <ng-container *ngIf="changeView == 'PlacementImmobilierView'">
             <div class="col-md-6 grid-margin transparent">
               <div class="row">
@@ -256,39 +252,38 @@
             </div>
           </div>
         </div>
-        <!--
-                    <div class="row">
-                      <div class="col-lg-6 grid-margin stretch-card" >
-                  
-                        <div class="card">
-                          <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                            
-                            <p class="card-title">Nombre de placements / Banques</p>
-                            <div style="width:200px; height:350px;">
-                              <canvas id="PieChartCountBanque"  ></canvas>
-                            </div>
-                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  -->
-
-
 
         <div class="row">
           <div class="col-md-3 stretch-card grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title">Taux Profit en 2021 </p>
+                  <p class="card-title">Quelques Statistiques de {{ this.getTodayDate().getFullYear()-1 }} </p>
 
                   <div class="me-5 mt-3">
-                    <p class="font-weight-500">Taux de profit moyen : </p>
-                    <h3 class="text-primary fs-30 font-weight-medium"> <b>12.3k</b></h3>
+                    <p class="font-weight-500">Taux de profit moyen  </p>
+                    <h3 class="text-primary fs-30 font-weight-medium"> <b>
+                      {{ this.formatNumber.transform(this.tauxProfitMoyen) }} %
+                    </b></h3>
                   </div>
 
                   <div class="me-5 mt-3">
-                    <p class="font-weight-500">Taux de profit moyen pondéré : </p>
-                    <h3 class="text-primary fs-30 font-weight-medium"><b>12.3k</b></h3>
+                    <p class="font-weight-500">Taux de profit moyen pondéré </p>
+                    <h3 class="text-primary fs-30 font-weight-medium"><b>
+                      {{ this.formatNumber.transform(this.tauxProfitPondere) }} % </b></h3>
+                  </div>
+
+                  <div class="me-5 mt-3">
+                    <p class="font-weight-500">Montant dépot total placements                                                                          </p>
+                    <h3 class="text-primary fs-30 font-weight-medium">
+                      <b> {{ this.totalMontantDepot}} DT </b>
+                    </h3>
+                  </div>
+
+                  <div class="me-5 mt-3">
+                    <p class="font-weight-500">Produits total des placements  </p>
+                    <h3 class="text-primary fs-30 font-weight-medium">
+                      <b> {{  this.totalMontantProfit }} DT </b>
+                    </h3>
                   </div>
 
                 </div>                
@@ -319,7 +314,6 @@
               </div>          
             </div>
           </div>
-
         <!--Pie chart-->
         <div class="col-md-4 grid-margin row">
           <div class="card">
@@ -339,13 +333,10 @@
           </div>
         </div>
 
-          
         </div>
       <br />
       </div>
     </div>
   </div>
 </div>
-
-
 <app-footer></app-footer>

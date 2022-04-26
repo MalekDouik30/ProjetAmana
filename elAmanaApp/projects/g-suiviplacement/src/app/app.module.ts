@@ -22,6 +22,7 @@ import {MatAutocompleteModule, MAT_AUTOCOMPLETE_SCROLL_STRATEGY} from '@angular/
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { ConfirmationPopoverModule } from 'angular-confirmation-popover'; // Popup Delete
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { MAT_SELECT_SCROLL_STRATEGY_PROVIDER } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -40,6 +41,8 @@ import { TotalPlacementComponent } from './total-placement/total-placement.compo
 import { UpdatePlacementComponent } from './placement/update-placement/update-placement.component';
 import { AddActionGratuiteComponent } from './placement/add-action-gratuite/add-action-gratuite.component';
 import { HistoriqueRealisationComponent } from './historique-realisation/historique-realisation.component';
+import { AddHistoriqueRealisationComponent } from './historique-realisation/add-historique-realisation/add-historique-realisation.component';
+import { UpdateHistoriqueRealisationComponent } from './historique-realisation/update-historique-realisation/update-historique-realisation.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,9 @@ import { HistoriqueRealisationComponent } from './historique-realisation/histori
     TotalPlacementComponent,
     UpdatePlacementComponent,
     AddActionGratuiteComponent,
-    HistoriqueRealisationComponent
+    HistoriqueRealisationComponent,
+    AddHistoriqueRealisationComponent,
+    UpdateHistoriqueRealisationComponent
   ],
   imports: [
     CommonModule,
@@ -82,7 +87,8 @@ import { HistoriqueRealisationComponent } from './historique-realisation/histori
     ReactiveFormsModule,
     ScrollingModule,
     MatTableExporterModule,
-    ConfirmationPopoverModule
+    ConfirmationPopoverModule,
+    MatCheckboxModule
   ],
   providers: [
 

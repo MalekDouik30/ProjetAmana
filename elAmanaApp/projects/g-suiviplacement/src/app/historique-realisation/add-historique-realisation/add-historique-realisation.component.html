@@ -1,0 +1,61 @@
+<div class="content-wrapper">      
+    <div class="row">
+        <div class="col-md-12 grid-margin">
+          <div class="row">
+              <h2 class="font-weight-bold">Historique Montants Dépot/Profit </h2>
+          </div>
+        </div>
+    </div>
+
+    <form class="form-sample" #monform="ngForm" (submit)="onSubmit(monform)">
+        <div class="row">
+            <div class="form-group">
+               
+                    <label>Montant Dépot</label>
+                    <input type="text" class="form-control form-control-lg" placeholder="Montant Dépot" #montantDepot="ngModel"
+                        [(ngModel)]="hitstoRealisationService.fromData.montant_depot_histo_rea" name="montantDepot" required />
+                        <div class="error-msg" *ngIf="(montantDepot.touched || monform.submitted) && montantDepot.errors?.required">
+                            Le champs libélle est obligatoire!
+                        </div>
+               
+                </div>
+            </div>
+                <div class="row">
+                <div class="form-group">
+                
+                    <label>Montant Profit</label>
+                      <input type="text" class="form-control form-control-lg" placeholder="Montant Profit" #montantProfit="ngModel"
+                            [(ngModel)]="hitstoRealisationService.fromData.profit_histo_rea" name="montantProfit" required />
+                            <div class="error-msg" *ngIf="(montantProfit.touched || monform.submitted) && montantProfit.errors?.required">
+                                Le champs libélle est obligatoire!
+                            </div>
+              
+                </div> 
+            </div>
+            <div class="row">
+                <div class="form-group">           
+                    <label>Année de placement</label>
+                    <input type="text" list="listAnnee"  autocomplete="off"  name="societeName" class="form-control form-control-lg" placeholder="Année"
+                    [(ngModel)]="hitstoRealisationService.fromData.annee_histo_rea">
+                    <datalist id="listAnnee">
+                        <option *ngFor="let item of this.listAnnee" ngValue="{{item}}"> {{item}} </option>
+                    </datalist>
+                
+                </div>
+            </div>
+            
+        
+    
+    <div class="mt-3">
+        <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit"
+              [disabled]="monform.invalid">Confirmer</button>
+    </div>
+          
+    </form>
+    <div class="mt-3">
+        <button type="button" class="btn btn-outline-secondary btn-lg btn-block" (click)="closeDialog(monform)" >Retour</button>
+    </div>
+
+
+
+</div>

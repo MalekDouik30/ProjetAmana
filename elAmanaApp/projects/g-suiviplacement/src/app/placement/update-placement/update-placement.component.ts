@@ -27,7 +27,7 @@ export class UpdatePlacementComponent implements OnInit {
 
   closeDialog(monForm : NgForm){ 
     this.dialog.closeAll();
-    this.resetForm(monForm)
+   
   }
 
   resetForm(monForm:NgForm){
@@ -51,7 +51,7 @@ export class UpdatePlacementComponent implements OnInit {
   }
   onSubmit(monForm : NgForm){
         this.updateData(monForm)
-        this.closeDialog(monForm)
+        this.resetForm(monForm)
         monForm.reset();
   }
 

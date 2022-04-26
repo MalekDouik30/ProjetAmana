@@ -10,7 +10,7 @@ import { HistoriqueRealisation } from '../Models/HistoriqueRealisation';
 export class HistoriqueRealisationService {
 
   constructor(private http:HttpClient) { }
-  public API_URL= environment.detailsEmp_url;
+  public API_URL= environment.historiqueRealisation_url;
   fromData:HistoriqueRealisation= new HistoriqueRealisation();
 
   getHistoRealisationResolver():Observable<HistoriqueRealisation[]>{
@@ -24,5 +24,9 @@ export class HistoriqueRealisationService {
 
   putHistoRealisation(){
     return this.http.put(this.API_URL+'/'+this.fromData.id_histo_rea,this.fromData)
+  }
+
+  refreshComponent() {
+    window.location.reload();
   }
 }

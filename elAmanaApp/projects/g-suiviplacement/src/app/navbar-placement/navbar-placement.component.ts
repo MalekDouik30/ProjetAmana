@@ -16,7 +16,7 @@ export class NavbarPlacementComponent implements OnInit {
 
   listfunctionalitiesInThisComponent=
   ["afficher placement","afficher dashboard placement","afficher parametre placement",
-  "afficher institution financiere","afficher intermediaire"]
+  "afficher institution financiere","afficher intermediaire","afficher historique realisation"]
   
   constructor(
     public typeP: TypeplacementService,

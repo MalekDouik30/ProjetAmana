@@ -34,6 +34,18 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.getApplications(this.listApplicationInThisComponent) 
+    this.dispalyApplications(5000)
+    window.location.replace('#0')
+  }
+
+  dispalyApplications(numberSecondes:number){
+    setTimeout (() => {
+      if(window.location.toString().includes("#0")){
+      
+        window.location.replace('#menu')
+      }
+
+   }, numberSecondes);
   }
 
 }

@@ -182,8 +182,8 @@ namespace BackendPlacement.Controllers
         public async Task<ActionResult<IEnumerable<Placement>>> GetPlacement()
         {
             
-            //_context.Database.ExecuteSqlRaw("EXEC [dbo].[verifDateEchance]"); // verif date echance
-            //_context.Database.ExecuteSqlRaw("EXEC [dbo].[CalculateCompensation2] @nbeJourAnnee = " + VerifAnneeBissextile());
+            _context.Database.ExecuteSqlRaw("EXEC [dbo].[verifDateEchance]"); // verif date echance
+            _context.Database.ExecuteSqlRaw("EXEC [dbo].[CalculateCompensation] @nbeJourAnnee = " + VerifAnneeBissextile());
             return await _context.Placements.ToListAsync();
         }
 

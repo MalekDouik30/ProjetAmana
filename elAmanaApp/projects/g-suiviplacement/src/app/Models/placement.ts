@@ -39,6 +39,8 @@ export class placement
           pla_montant_avant_rachat=0;
           pla_nbre_action_gratuite=0;
           pla_emprunt_hypothese_2=0;
+          pla_taux_complement =0;
+          pla_calcule_profit_avec_taux_variable=false;
 
 
 }
