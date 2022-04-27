@@ -92,7 +92,7 @@
                       Total rémunération des placements financiers le: <b> {{ getTodayDate() | date: "dd/MM/yyyy" }}</b>
                     </p>
                     <p class="fs-40 mb-2">
-                      <br>
+                     
                     </p>
                     <p>
                       {{
@@ -215,7 +215,7 @@
                 </div>
                 <p class="card-title">Montant Dépôt / Banques</p>
                 <p class="font-weight-500">
-                  Montant total des investissements répartis entre les banques
+                  Montant total des placements en cours par banque
                 </p>
                 <canvas
                   id="BarChart"
@@ -240,7 +240,7 @@
                 </div>
                 <p class="card-title">Taux profit moyen / Banques</p>
                 <p class="font-weight-500">
-                  Le taux de profit moyen des investissements par banque
+                  Le taux de profit moyen des placements en cours par banque
                 </p>
                 <canvas
                   id="BarChartTaux"
@@ -257,7 +257,7 @@
           <div class="col-md-3 stretch-card grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title">Quelques Statistiques de {{ this.getTodayDate().getFullYear()-1 }} </p>
+                  <p class="card-title">Quelques Statistiques de {{ this.getTodayDate().getFullYear() }} </p>
 
                   <div class="me-5 mt-3">
                     <p class="font-weight-500">Taux de profit moyen  </p>
@@ -275,14 +275,14 @@
                   <div class="me-5 mt-3">
                     <p class="font-weight-500">Montant dépot total placements                                                                          </p>
                     <h3 class="text-primary fs-30 font-weight-medium">
-                      <b> {{ this.totalMontantDepot}} DT </b>
+                      <b> {{ this.formatNumber.transform(this.totalMontantDepot)}} DT </b>
                     </h3>
                   </div>
 
                   <div class="me-5 mt-3">
                     <p class="font-weight-500">Produits total des placements  </p>
                     <h3 class="text-primary fs-30 font-weight-medium">
-                      <b> {{  this.totalMontantProfit }} DT </b>
+                      <b> {{  this.formatNumber.transform(this.totalMontantProfit) }} DT </b>
                     </h3>
                   </div>
 

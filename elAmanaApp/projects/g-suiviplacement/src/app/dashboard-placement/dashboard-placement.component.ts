@@ -72,10 +72,14 @@ export class DashboardPlacementComponent implements OnInit {
   listDernierTauxPlacementParBanque:any[]=[]
   tauxProfitMoyen=0
   tauxProfitPondere=0
-
   // Historique realisation
   totalMontantDepot=0
   totalMontantProfit=0
+  // Taux Réalisation
+  tauxRealisationMontantDepot:any
+  tauxRealisationMontantProfitDateJour:any
+  tauxRealisationMontantProfitTrimestre:any
+  tauxRealisationMontantProfitAnnee:any
 
 
   changeView="";
@@ -116,7 +120,8 @@ export class DashboardPlacementComponent implements OnInit {
    this.getDetailPlacementFinancier();
    this.getDetailPlacementImmobilier();
    this.calculateTauxProfit();
-   this.getHistoriqueRealisation()
+
+ 
    }
   
    
@@ -131,7 +136,9 @@ export class DashboardPlacementComponent implements OnInit {
           // 1
           this.nbrePlacementGlobal = this.nbrePlacementGlobal+1
           this.montantPlacementGlobal = this.montantPlacementGlobal+item.pla_montant_depot
-
+          this.varTotalRemunerationDateDuJour = this.varTotalRemunerationDateDuJour + item.pla_produits_placement_consommes_date_jour
+          this.varTotalRemunerationTrimestre =this.varTotalRemunerationTrimestre + item.pla_produits_placement_consommes_trimestre_comptable
+          this.varTotalRemunerationAnnee =this.varTotalRemunerationAnnee + item.pla_produits_placement_consommes_annee_comptable
           // 2. Get Count and Sum By TypePlacement
           if(!listTypePlacementId.includes(item.pla_id_typ_placement)){
             listTypePlacementId.push(item.pla_id_typ_placement)
@@ -188,6 +195,8 @@ export class DashboardPlacementComponent implements OnInit {
           totalTauxPlacementByBanque.forEach((value, index)=>{
             this.moyenneTauxPlacementByBanque.push(value/this.nbrePlacementByBanque[index])
           })
+
+
 
           /*
         listActionId.forEach((value, index)=>{
@@ -303,7 +312,7 @@ export class DashboardPlacementComponent implements OnInit {
     }
     )
   }
-
+  this.getHistoriqueRealisation()
   })
       this.placementService.getPlacementResolver().subscribe(
         res=>{
@@ -489,12 +498,31 @@ export class DashboardPlacementComponent implements OnInit {
     )
   }
 
-    getTodayDate():Date{
+  getDiffDaysBetween2Date(date1:any,date2:any){
+    // Calculer la difference de jours entre 2 date.
+    var Time = date2.getTime() - date1.getTime(); 
+    var Days = Time / (1000 * 3600 * 24);
+    return Math.floor(Days)
+  }
+
+  getTodayDate():Date{
       let myDate = new Date();
       return myDate
-    }
+  }
 
-   changeViewCard(viewPlacement:string){
+  VerifLapYear()
+  {
+    // Vérifier si l'année précédente est une année bissextile ou non 
+    let year = this.getTodayDate().getFullYear();
+
+    if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+    {
+      return 366;
+    }
+    return 365;
+  }
+
+  changeViewCard(viewPlacement:string){
     this.changeView=viewPlacement
   }
 
@@ -507,7 +535,7 @@ export class DashboardPlacementComponent implements OnInit {
       res=>{
         for(let item of res){
           let dateSouscription = new Date(item.pla_date_souscription)
-          if(dateSouscription.getFullYear() == this.getTodayDate().getFullYear()-1 ){
+          if(dateSouscription.getFullYear() == this.getTodayDate().getFullYear() ){
             this.tauxProfitMoyen= this.tauxProfitMoyen+item.pla_taux_profit
             totalDepot = totalDepot+item.pla_montant_depot
             sommeMontantxTaux=sommeMontantxTaux + (item.pla_montant_depot * item.pla_taux_profit)
@@ -521,23 +549,74 @@ export class DashboardPlacementComponent implements OnInit {
   }
 
   getHistoriqueRealisation(){
+    // Historique de réalisation pour avoir le Montant dépot total placements / Produits total des placements dans l'année précedente
     this.histoService.getHistoRealisationResolver().subscribe(
       res=>{
         for(let item of res ){
-          if(Number(item.annee_histo_rea) == this.getTodayDate().getFullYear()-1){
+          if(Number(item.annee_histo_rea) == this.getTodayDate().getFullYear()){
             this.totalMontantDepot=item.montant_depot_histo_rea
             this.totalMontantProfit=item.profit_histo_rea
+
+            // Date du jour
+            this.tauxRealisationMontantDepot = this.CalculateTauxDeRealisationToday(this.totalMontantDepot,this.totalMontantProfit,this.varTotalRemunerationDateDuJour,this.montantPlacementGlobal)?.tauxRealisationDepot 
+            this.tauxRealisationMontantProfitDateJour = this.CalculateTauxDeRealisationToday(this.totalMontantDepot,this.totalMontantProfit,this.varTotalRemunerationDateDuJour,this.montantPlacementGlobal)?.tauxRealisationProfitInThisDay
+            // Annee comptable
+            this.tauxRealisationMontantProfitAnnee= this.CalculateTauxDeRealisationYear(this.totalMontantProfit,this.varTotalRemunerationAnnee) 
+            // Trimestre comptable
+            this.tauxRealisationMontantProfitTrimestre = this.CalculateTauxDeRealisationTrimestre(this.totalMontantProfit,this.varTotalRemunerationTrimestre) 
           }
         }
       }
     )
   }
 
-  CalculateTauxDeRealisation(){
-    
+  CalculateTauxDeRealisationToday(montantDepotToAchieve:number,montantProfitToAchieve:number,remunerationDateDuJourCurrentDate:number,montantDepotCurrentDate:number){
+    let firstDayOfYear = new Date("01/01/"+this.getTodayDate().getFullYear());
+    if(montantDepotToAchieve!=0 && montantProfitToAchieve!=0){
+      // Montants de la même période de l'année précédente 
+      let montantProfitInThisDay= (montantProfitToAchieve * this.getDiffDaysBetween2Date(firstDayOfYear,this.getTodayDate()) ) / this.VerifLapYear()
+      // Taux de realisation
+      let tauxRealisationProfitInThisDay = (remunerationDateDuJourCurrentDate *100) / montantProfitInThisDay
+      let tauxRealisationDepot = (montantDepotCurrentDate * 100) / montantDepotToAchieve
+      return { tauxRealisationProfitInThisDay,tauxRealisationDepot }
+    }
+    return null;
   }
 
+  CalculateTauxDeRealisationYear(montantProfitToAchieve:number,remunerationDateDuJourCurrentYear:number){
+    let tauxRealisation= (remunerationDateDuJourCurrentYear *100) / montantProfitToAchieve
+    return tauxRealisation 
+  }
 
+  CalculateTauxDeRealisationTrimestre(montantProfitToAchieve:number,remunerationTrimestreCurrentYear:number){
+    let firstDayOfYear = new Date("01/01/"+this.getTodayDate().getFullYear());
+    
+    let montantToAcheiveInThisTrimestre = (montantProfitToAchieve * 
+      (this.getDiffDaysBetween2Date(firstDayOfYear,this.getTodayDate()) + this.getProchainTrimestreComptable())) / 
+      this.VerifLapYear()
+      let tauxRealisation = (remunerationTrimestreCurrentYear *100) / montantToAcheiveInThisTrimestre
+      return tauxRealisation
+
+  }
+
+  getProchainTrimestreComptable(){
+    // Trimestre
+    let trimestresComptable = [
+      this.getTodayDate().getFullYear()+"/3/31",
+      this.getTodayDate().getFullYear()+"/6/30",
+      this.getTodayDate().getFullYear()+"/9/30",
+      this.getTodayDate().getFullYear()+"/12/31"
+    ]
+    let getDifferenceDates=[]
+    for(let item of trimestresComptable){
+      let myDate = new Date(item) 
+      if(this.getDiffDaysBetween2Date(this.getTodayDate(),myDate)>=0){
+        getDifferenceDates.push(this.getDiffDaysBetween2Date(this.getTodayDate(),myDate))
+      }
+    }
+    let nbeJourjoursTrimestreProchain = getDifferenceDates.reduce((a, b)=>Math.min(a, b));
+    return nbeJourjoursTrimestreProchain
+  }
 
 
 

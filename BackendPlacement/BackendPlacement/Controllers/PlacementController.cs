@@ -184,7 +184,11 @@ namespace BackendPlacement.Controllers
             
             _context.Database.ExecuteSqlRaw("EXEC [dbo].[verifDateEchance]"); // verif date echance
             _context.Database.ExecuteSqlRaw("EXEC [dbo].[CalculateCompensation] @nbeJourAnnee = " + VerifAnneeBissextile());
-            return await _context.Placements.ToListAsync();
+
+            /*var placement2 = _context.Placements.Where(p => p.pla_etat == "en cours" || p.pla_date_echeance.Year == DateTime.Now.Year).ToListAsync();
+            return await placement2;*/
+
+           return await _context.Placements.ToListAsync();
         }
 
 
@@ -195,7 +199,24 @@ namespace BackendPlacement.Controllers
 
         }
 
-        [HttpGet("DernierTauxPlacementParBanque")]
+        [HttpGet("GetPlacementStatistique")]
+        public ActionResult<Placement> GetPlacementStatistique()
+        {
+
+            var placement = _context.Placements
+                                .Where(p => p.pla_date_echeance.Year <= DateTime.Now.Year)
+                                .GroupBy(p => p.pla_date_echeance.Year)
+                                .Select(g => new { AnneEchance = g.Key,
+                                    SommeMontantPlacement = g.Sum(x => x.pla_montant_depot) ,
+                                    NombrePlacements = g.Count(),
+                                    Annee = g.Max(x => x.pla_date_echeance.Year)
+
+                                }).ToList();
+
+            return Ok(placement);
+        }
+
+            [HttpGet("DernierTauxPlacementParBanque")]
         public ActionResult<Placement> GetDernierTauxPlacementParBanque()
         {
             /*

@@ -50,7 +50,7 @@ export class UpdateHistoriqueRealisationComponent implements OnInit {
 
   ngOnInit(): void {
     let myDate = new Date();
-    for(let i=2014; i<myDate.getFullYear()-1;i++){
+    for(let i=2014; i<myDate.getFullYear();i++){
       this.listAnnee.push(i)
     }
     
