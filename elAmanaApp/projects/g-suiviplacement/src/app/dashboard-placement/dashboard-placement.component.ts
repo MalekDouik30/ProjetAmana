@@ -121,7 +121,6 @@ export class DashboardPlacementComponent implements OnInit {
    this.getDetailPlacementImmobilier();
    this.calculateTauxProfit();
 
- 
    }
   
    
@@ -548,6 +547,25 @@ export class DashboardPlacementComponent implements OnInit {
     )
   }
 
+  getProchainTrimestreComptable(){
+    // Trimestre
+    let trimestresComptable = [
+      this.getTodayDate().getFullYear()+"/3/31",
+      this.getTodayDate().getFullYear()+"/6/30",
+      this.getTodayDate().getFullYear()+"/9/30",
+      this.getTodayDate().getFullYear()+"/12/31"
+    ]
+    let getDifferenceDates=[]
+    for(let item of trimestresComptable){
+      let myDate = new Date(item) 
+      if(this.getDiffDaysBetween2Date(this.getTodayDate(),myDate)>=0){
+        getDifferenceDates.push(this.getDiffDaysBetween2Date(this.getTodayDate(),myDate))
+      }
+    }
+    let nbeJourjoursTrimestreProchain = getDifferenceDates.reduce((a, b)=>Math.min(a, b));
+    return nbeJourjoursTrimestreProchain
+  }
+
   getHistoriqueRealisation(){
     // Historique de réalisation pour avoir le Montant dépot total placements / Produits total des placements dans l'année précedente
     this.histoService.getHistoRealisationResolver().subscribe(
@@ -576,7 +594,7 @@ export class DashboardPlacementComponent implements OnInit {
       // Montants de la même période de l'année précédente 
       let montantProfitInThisDay= (montantProfitToAchieve * this.getDiffDaysBetween2Date(firstDayOfYear,this.getTodayDate()) ) / this.VerifLapYear()
       // Taux de realisation
-      let tauxRealisationProfitInThisDay = (remunerationDateDuJourCurrentDate *100) / montantProfitInThisDay
+      let tauxRealisationProfitInThisDay = (remunerationDateDuJourCurrentDate * 100) / montantProfitInThisDay
       let tauxRealisationDepot = (montantDepotCurrentDate * 100) / montantDepotToAchieve
       return { tauxRealisationProfitInThisDay,tauxRealisationDepot }
     }
@@ -590,33 +608,42 @@ export class DashboardPlacementComponent implements OnInit {
 
   CalculateTauxDeRealisationTrimestre(montantProfitToAchieve:number,remunerationTrimestreCurrentYear:number){
     let firstDayOfYear = new Date("01/01/"+this.getTodayDate().getFullYear());
-    
     let montantToAcheiveInThisTrimestre = (montantProfitToAchieve * 
       (this.getDiffDaysBetween2Date(firstDayOfYear,this.getTodayDate()) + this.getProchainTrimestreComptable())) / 
       this.VerifLapYear()
       let tauxRealisation = (remunerationTrimestreCurrentYear *100) / montantToAcheiveInThisTrimestre
       return tauxRealisation
-
   }
 
-  getProchainTrimestreComptable(){
-    // Trimestre
-    let trimestresComptable = [
-      this.getTodayDate().getFullYear()+"/3/31",
-      this.getTodayDate().getFullYear()+"/6/30",
-      this.getTodayDate().getFullYear()+"/9/30",
-      this.getTodayDate().getFullYear()+"/12/31"
-    ]
-    let getDifferenceDates=[]
-    for(let item of trimestresComptable){
-      let myDate = new Date(item) 
-      if(this.getDiffDaysBetween2Date(this.getTodayDate(),myDate)>=0){
-        getDifferenceDates.push(this.getDiffDaysBetween2Date(this.getTodayDate(),myDate))
-      }
-    }
-    let nbeJourjoursTrimestreProchain = getDifferenceDates.reduce((a, b)=>Math.min(a, b));
-    return nbeJourjoursTrimestreProchain
+  progressBar(pourcentageQuantiteDisponible:number){
+    var progPourcentage=0
+    var progStyle="progress-bar bg-info"
+   if (0 < pourcentageQuantiteDisponible &&  pourcentageQuantiteDisponible <= 25){
+     progPourcentage= 25;
+     progStyle="progress-bar bg-danger"
+   }
+   if (25 < pourcentageQuantiteDisponible &&  pourcentageQuantiteDisponible<= 50){
+     progPourcentage= 50;
+     progStyle="progress-bar bg-warning"
+   }
+   if (50 < pourcentageQuantiteDisponible &&  pourcentageQuantiteDisponible <= 75){
+     progPourcentage= 75;
+     progStyle="progress-bar bg-info"
+   }
+   if (75 < pourcentageQuantiteDisponible &&  pourcentageQuantiteDisponible <= 100){
+     progPourcentage= 100;
+     progStyle="progress-bar bg-primary"
+   }
+
+   if(pourcentageQuantiteDisponible>100){
+    progPourcentage= 100;
+    progStyle="progress-bar bg-primary"
+   }
+   
+   return {progPourcentage,progStyle}
   }
+
+
 
 
 

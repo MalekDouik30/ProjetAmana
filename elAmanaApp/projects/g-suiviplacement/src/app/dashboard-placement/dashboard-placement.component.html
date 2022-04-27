@@ -4,15 +4,26 @@
     <app-navbar-placement></app-navbar-placement>
     <div class="main-panel">
       <div class="content-wrapper">
-        <div class="row">
-          <div class="col-md-12 grid-margin">
-            <div class="row">
-              <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                <h2 class="font-weight-bold">Tableau de bord des placements</h2>
+      <div class="row">
+        <div class="col-md-12 grid-margin">
+          <div class="row">
+            <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+              <h2 class="font-weight-bold">Tableau de bord des placements</h2>
+            </div>
+            <div class="col-12 col-xl-4">
+             <div class="justify-content-end d-flex">
+              <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                <button type="button" class="btn btn-outline-secondary btn-sm">              
+                  <i class="bi bi-bar-chart-fill"></i>
+                  Statistiques
+                </button>
               </div>
+             </div>
             </div>
           </div>
         </div>
+      </div>
+
         <div class="row">
           <div class="col-md-6 grid-margin transparent">
             <div class="row">
@@ -27,6 +38,12 @@
                       Total des placements :
                       <b> {{ this.nbrePlacementGlobal }} </b>
                     </p>
+                    <p>
+                      Taux de réalisation  {{  this.formatNumber.transform(this.tauxRealisationMontantDepot) }} % 
+                    </p>
+                      <div class="progress progress-md mx-4">
+                        <div [class]="progressBar(this.tauxRealisationMontantDepot).progStyle" role="progressbar" [style.width.%]="progressBar(this.tauxRealisationMontantDepot).progPourcentage" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>  
                   </div>
                 </div>
               </div>                 
@@ -49,8 +66,6 @@
                     </p>
                     <p class="fs-40 mb-2">
                       {{ this.formatNumber.transform( montantPlacementByType[0])}} DT
-
-                      
                     </p>
                     <p>
                       Total des placements :
@@ -92,15 +107,19 @@
                       Total rémunération des placements financiers le: <b> {{ getTodayDate() | date: "dd/MM/yyyy" }}</b>
                     </p>
                     <p class="fs-40 mb-2">
-                     
-                    </p>
-                    <p>
                       {{
                         this.formatNumber.transform(this.varTotalRemunerationDateDuJour )
                       }}
                       DT
                     </p>
-                  
+                    <p>
+                      Taux de réalisation  {{  this.formatNumber.transform(this.tauxRealisationMontantProfitDateJour) }} % 
+                    </p>
+
+                    <div class="progress progress-md mx-4">
+                      <div [class]="progressBar(this.tauxRealisationMontantProfitDateJour).progStyle" role="progressbar" [style.width.%]="progressBar(this.tauxRealisationMontantProfitDateJour).progPourcentage" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>  
+
                   </div>
                 </div>
               </div>
@@ -115,12 +134,17 @@
                       prochain <b>trimestre comptable</b>.
                     </p>
                     <p class="fs-40 mb-2">
-               
-                    </p>
-                    <p>
                       {{ this.formatNumber.transform(this.varTotalRemunerationTrimestre ) }}
                       DT
                     </p>
+                    <p>
+                      Taux de réalisation  {{  this.formatNumber.transform(this.tauxRealisationMontantProfitTrimestre) }} % 
+                    </p>
+
+                    <div class="progress progress-md mx-4">
+                      <div [class]="progressBar(this.tauxRealisationMontantProfitTrimestre).progStyle" role="progressbar" [style.width.%]="progressBar(this.tauxRealisationMontantProfitTrimestre).progPourcentage" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>  
+                    
                   </div>
                 </div>
               </div>
@@ -132,11 +156,14 @@
                       la <b>l'année comptable</b>
                     </p>
                     <p class="fs-40 mb-2">
-                  
-                    </p>
-                    <p>
                       {{ this.formatNumber.transform(this.varTotalRemunerationAnnee ) }} DT
                     </p>
+                    <p>
+                      Taux de réalisation  {{  this.formatNumber.transform(this.tauxRealisationMontantProfitAnnee) }} % 
+                    </p>
+                      <div class="progress progress-md mx-4">
+                        <div [class]="progressBar(this.tauxRealisationMontantProfitAnnee).progStyle" role="progressbar" [style.width.%]="progressBar(this.tauxRealisationMontantProfitAnnee).progPourcentage" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>  
                   </div>
                 </div>
               </div>
@@ -257,7 +284,7 @@
           <div class="col-md-3 stretch-card grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title">Quelques Statistiques de {{ this.getTodayDate().getFullYear() }} </p>
+                  <p class="card-title">Statistiques de {{ this.getTodayDate().getFullYear() }} </p>
 
                   <div class="me-5 mt-3">
                     <p class="font-weight-500">Taux de profit moyen  </p>

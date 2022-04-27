@@ -47,10 +47,7 @@ export class PlacementComponent implements OnInit {
     listfunctionalitiesInThisComponent=["ajouter placement","rachat placement","valider placement","ajouter des actions gratuites"] // WARNING: The name of functionalities in this list must be the same in the function table
     displayedColumns: string[] ;
     dataSource:MatTableDataSource<any>;
-
-
     searchWord="" 
-
     filterDiv=""
     functionSearchfor : Function
     etatPlacement=true
@@ -80,15 +77,12 @@ export class PlacementComponent implements OnInit {
 
     listPlacement:placement[]=[]
 
-
   onCreate(){
     // Popup Ajouter Placement
     this.dialog.open(AddPlacementComponent,{
       maxHeight:"100vh"
     })
   }
-
-
 
   applyFilter($event:any){
     this.dataSource.filter=$event.target.value;
@@ -123,13 +117,13 @@ export class PlacementComponent implements OnInit {
 
     importAsXlsx(fileName:string){
       this.matTableExporter.exportTable('xlsx', {fileName:fileName, sheet: 'sheet_name'});
-      }
+    }
 
     updatePlacement(SelectedRecord:placement){
       this.plaService.fromData = SelectedRecord
       this.onUpdate();
     }
-      onUpdate(){
+    onUpdate(){
       this.dialog.open(UpdatePlacementComponent,{
         maxHeight: '100vh',disableClose: true 
       });

@@ -203,17 +203,25 @@ namespace BackendPlacement.Controllers
         public ActionResult<Placement> GetPlacementStatistique()
         {
 
-            var placement = _context.Placements
-                                .Where(p => p.pla_date_echeance.Year <= DateTime.Now.Year)
-                                .GroupBy(p => p.pla_date_echeance.Year)
-                                .Select(g => new { AnneEchance = g.Key,
-                                    SommeMontantPlacement = g.Sum(x => x.pla_montant_depot) ,
-                                    NombrePlacements = g.Count(),
-                                    Annee = g.Max(x => x.pla_date_echeance.Year)
+            try
+            {
+                var placement = _context.Placements
+                       .Where(p => p.pla_date_echeance.Year <= DateTime.Now.Year)
+                       .GroupBy(p => p.pla_date_echeance.Year)
+                       .Select(g => new {
+                           AnneEchance = g.Key,
+                           SommeMontantPlacement = g.Sum(x => x.pla_montant_depot),
+                           NombrePlacements = g.Count(),
+                           Annee = g.Max(x => x.pla_date_echeance.Year)
+                       }).ToList();
 
-                                }).ToList();
+                return Ok(placement);
 
-            return Ok(placement);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
         }
 
             [HttpGet("DernierTauxPlacementParBanque")]
