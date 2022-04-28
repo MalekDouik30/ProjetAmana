@@ -116,7 +116,6 @@ export class DashboardPlacementComponent implements OnInit {
    );
 
    this.getMontantNbeTotalePlacement();
-   this.getAction();
    this.getDetailPlacementFinancier();
    this.getDetailPlacementImmobilier();
    this.calculateTauxProfit();
@@ -211,7 +210,8 @@ export class DashboardPlacementComponent implements OnInit {
 
         }) */
           /*Bar chart */
-           new Chart("BarChart", {
+/*
+         new Chart("BarChart", {
             type: 'bar',
             data : {
               labels:  this.listBanqueLibelle,
@@ -247,6 +247,7 @@ export class DashboardPlacementComponent implements OnInit {
         })
          /*End Bar chart */
          /*Bar chart2 */
+         /*
         new Chart("BarChartTaux", {
           type: 'bar',
           data : {
@@ -281,7 +282,7 @@ export class DashboardPlacementComponent implements OnInit {
         }
       })
          /*Pie chart */
-
+/*
          var chart1 = new Chart("PieChartCountBanque", {
           type: 'doughnut',
           data : {
@@ -306,7 +307,7 @@ export class DashboardPlacementComponent implements OnInit {
               ],
             }],
         },
-      })
+      })*/
 
     }
     )
@@ -333,78 +334,7 @@ export class DashboardPlacementComponent implements OnInit {
    }
 
 
-   getAction(){
-    // Action doonnees pour la bar chart :
-     this.placementService.getPlacementResolverAction().subscribe(
-      res=>{
-        for(let item of res){
-          if(item.pla_action_cotee==1){
-            this.listNomEntrepriseCotes.push(item.pla_societe)
-            this.listPrixJour.push(item.pla_prix_jour)
-            this.listPrixAchat.push(item.pla_prix_achat)
-        }
-      }
-       /*Bar chart3 */
-       new Chart("BarChartPrixAction", {
-        type: 'bar',
-        data : {
-          labels:  this.listNomEntrepriseCotes,
-          datasets: [{
-              data:  this.listPrixAchat,
-              indexAxis: 'y',
-              backgroundColor: [
-                'rgba(248,155	,58, 0.5)',
-                'rgba(0,145,97, 0.5)',
-                'rgba(255, 206, 86, 0.5)',
-                'rgba(102, 76, 85,0.5)',
-                'rgba(153, 102, 255, 0.5)',
-                'rgba(255, 159, 64, 0.5)'
-            ],
-            borderColor: [
-              'rgba(248,155	,58, 1)',
-              'rgba(0,145,97, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(102, 76, 85,1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-          },
-          {
-            data: this.listPrixJour,
-            indexAxis: 'y',
-            backgroundColor: [
-              'rgba(248,155	,58, 0.5)',
-              'rgba(0,145,97, 0.5)',
-              'rgba(255, 206, 86, 0.5)',
-              'rgba(102, 76, 85,0.5)',
-              'rgba(153, 102, 255, 0.5)',
-              'rgba(255, 159, 64, 0.5)'
-          ],
-          borderColor: [
-            'rgba(248,155	,58, 1)',
-            'rgba(0,145,97, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(102, 76, 85,1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-          ],
-          borderWidth: 1
-        }
 
-        ]
-      },
-      options: {
-        plugins: {
-          legend: {
-            display: false
-          }
-        }
-      }
-    })
-    }
-  )
- }
    getDetailPlacementFinancier(){
     let listActionId:number[]=[];
     this.placementService.getPlacementResolver().subscribe(
@@ -643,8 +573,79 @@ export class DashboardPlacementComponent implements OnInit {
    return {progPourcentage,progStyle}
   }
 
+/*
+  getAction(){
+    // Action doonnees pour la bar chart :
+     this.placementService.getPlacementResolverAction().subscribe(
+      res=>{
+        for(let item of res){
+          if(item.pla_action_cotee==1){
+            this.listNomEntrepriseCotes.push(item.pla_societe)
+            this.listPrixJour.push(item.pla_prix_jour)
+            this.listPrixAchat.push(item.pla_prix_achat)
+        }
+      }
 
+       new Chart("BarChartPrixAction", {
+        type: 'bar',
+        data : {
+          labels:  this.listNomEntrepriseCotes,
+          datasets: [{
+              data:  this.listPrixAchat,
+              indexAxis: 'y',
+              backgroundColor: [
+                'rgba(248,155	,58, 0.5)',
+                'rgba(0,145,97, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(102, 76, 85,0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
+            ],
+            borderColor: [
+              'rgba(248,155	,58, 1)',
+              'rgba(0,145,97, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(102, 76, 85,1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          },
+          {
+            data: this.listPrixJour,
+            indexAxis: 'y',
+            backgroundColor: [
+              'rgba(248,155	,58, 0.5)',
+              'rgba(0,145,97, 0.5)',
+              'rgba(255, 206, 86, 0.5)',
+              'rgba(102, 76, 85,0.5)',
+              'rgba(153, 102, 255, 0.5)',
+              'rgba(255, 159, 64, 0.5)'
+          ],
+          borderColor: [
+            'rgba(248,155	,58, 1)',
+            'rgba(0,145,97, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(102, 76, 85,1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }
 
+        ]
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false
+          }
+        }
+      }
+    })
+    }
+  )
+ }*/
 
 
 
