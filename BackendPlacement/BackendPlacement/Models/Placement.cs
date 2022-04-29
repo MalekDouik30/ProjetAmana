@@ -44,9 +44,7 @@ namespace BackendPlacement.Models
         public double? pla_value_consome_date_jour { get; set; }
         public double? pla_value_consome_trimestre_comptable { get; set; }
         public int? pla_Vliqui { get; set; }
-
         public double? pla_value_consome_annee_comptable { get; set; }
-
         public double? pla_produits_placement_consommes_date_jour { get; set; }
         public double? pla_produits_placement_consommes_trimestre_comptable { get; set; }
         public double? pla_produits_placement_consommes_annee_comptable { get; set; }
@@ -65,6 +63,8 @@ namespace BackendPlacement.Models
         public int? pla_emprunt_hypothese_2 { get; set; }
         public double? pla_taux_complement { get; set; }
         public bool? pla_calcule_profit_avec_taux_variable { get; set; }
+        public int? pla_nbrobligation { get; set; }
+        public double? pla_prixobligation { get; set; }
 
     }
 }

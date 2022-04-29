@@ -244,12 +244,7 @@
                 <p class="font-weight-500">
                   Montant total des placements en cours par banque
                 </p>
-                <canvas
-                  id="BarChart1"
-                  width="351"
-                  height="150"
-                  class="chartjs-render-monitor"
-                ></canvas>
+                  <canvas id="BarChart1" width="351" height="150" class="chartjs-render-monitor"></canvas>
               </div>
             </div>
           </div>
@@ -269,12 +264,7 @@
                 <p class="font-weight-500">
                   Le taux de profit moyen des placements en cours par banque
                 </p>
-                <!--canvas
-                  id="BarChartTaux"
-                  width="351"
-                  height="150"
-                  class="chartjs-render-monitor"
-                ></canvas-->
+                <canvas id="BarChart2" width="351" height="150" class="chartjs-render-monitor"></canvas>
               </div>
             </div>
           </div>
@@ -355,7 +345,7 @@
               <p class="font-weight-500">
                 Le nombre de placements répartis entre les banques
               </p>
-              <!--canvas id="PieChartCountBanque" width="400" height="100" class="chartjs-render-monitor"></canvas-->
+              <canvas id="PieChartCountBanque" width="400" height="100" class="chartjs-render-monitor"></canvas>
             </div>
           </div>
         </div>
@@ -366,45 +356,12 @@
     </div>
   </div>
 </div>
-<app-footer></app-footer>
 
 <script>
-  var ctx = document.getElementById('BarChart1').getContext('2d');
-  var barChart = new Chart("BarChart1", {
-    type: 'bar',
-    data : {
-      labels:  ['A','N'],
-      datasets: [{
-        data:  [1,2],
-          backgroundColor: [
-                    'rgba(248,155	,58, 0.5)',
-                    'rgba(0,145,97, 0.5)',
-                    'rgba(255, 206, 86, 0.5)',
-                    'rgba(102, 76, 85,0.5)',
-                    'rgba(153, 102, 255, 0.5)',
-                    'rgba(255, 159, 64, 0.5)'
-                ],
-                borderColor: [
-                  'rgba(248,155	,58, 1)',
-                  'rgba(0,145,97, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(102, 76, 85,1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-              }]
-          },
-          options: {
-            plugins: {
-              legend: {
-                display: false
-              }
-            }
-          }
-
-  })
-
-
 
 </script>
+
+
+<app-footer></app-footer>
+
+

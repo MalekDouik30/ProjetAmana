@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { PlacementService } from '../services/placement.service';
 import { placement } from '../Models/placement';
 import { TypeplacementService } from '../services/typeplacement.service';
 import Chart from 'chart.js/auto';
 import { TypefondService } from '../services/typefond.service';
-import { TypesousplacementService } from '../services/typesousplacement.service';
 import { TypesoussousplacementService } from '../services/typesoussousplacement.service';
 import { TypeactionService } from '../services/typeaction.service';
 import { OrganismeService } from '../services/organisme.service';
@@ -25,11 +24,12 @@ export class DashboardPlacementComponent implements OnInit {
   varSarra="sarra test"
 
   /** Fin test gith**/
+
   typePlacement=""
   montantPlacementGlobal=0;
   nbrePlacementGlobal=0;
   nbrePlacementByType:number[]=[];
-  nbrePlacementByBanque:number[]=[];
+
   nbrePlacementByAction:number[]=[];
   nbrePlacementByAction_Action:number[]=[];
   montantPlacementByType:number[]=[]
@@ -38,7 +38,7 @@ export class DashboardPlacementComponent implements OnInit {
   montantPlacementByAction:number[]=[]
   montantPlacementByAction_Action:number[]=[]
   listTypePlacementLibelle:string[]=[]
-  listBanqueLibelle:string[]=[]
+
   listActionLibelle:string[]=[]
   listFondsLibelle:string[]=[]
 
@@ -88,11 +88,9 @@ export class DashboardPlacementComponent implements OnInit {
     public placementService:PlacementService,
     public typePlacementService: TypeplacementService,
     public typeFondService: TypefondService,
-    public typeSousPlacementService : TypesousplacementService,
     public typeSousSousPlacementService:TypesoussousplacementService,
     public typeActionService:TypeactionService,
     public organismeService:OrganismeService,
-    public detailEmpService:DetailsEmpService,
     public histoService:HistoriqueRealisationService,
     public formatNumber:FormatNumberPipe,
     public exportExcel:ExportExcel
@@ -101,11 +99,13 @@ export class DashboardPlacementComponent implements OnInit {
    ngOnInit(): void {
     this.typePlacementService.getTypeplacement();
     this.typeFondService.getTypefond();
-    this.typeSousPlacementService.getTypeSplacement();
     this.typeSousSousPlacementService.getTypeSSplacement();
     this.typeActionService.getTypeaction();
     this.organismeService.getOrganisme();
-    this.detailEmpService.getDetailsEmp()
+
+
+   this.getPlacementProfitMoyenParBanque()
+   this.getPlacementTotalMontantDepotParBanque()
 
    this.placementService.getDernierTauxPlacementParBanque().subscribe(
      res=>{
@@ -119,29 +119,29 @@ export class DashboardPlacementComponent implements OnInit {
    this.getDetailPlacementFinancier();
    this.getDetailPlacementImmobilier();
    this.calculateTauxProfit();
-
    }
   
    
    getMontantNbeTotalePlacement(){
     let listTypePlacementId:number[]=[]
-    let listPlacementBanqueId:number[]=[];
-    let totalTauxPlacementByBanque:number[]=[]
+    this.placementService.getPlacementTotaux().subscribe(
+      res=>{
+          this.nbrePlacementGlobal = res.nbreTotalPlacement
+          this.montantPlacementGlobal = res.sommeTotaleMontantDepot
+          this.varTotalRemunerationDateDuJour = res.sommeTotalRemunerationDateJour
+          this.varTotalRemunerationTrimestre =res.sommeTotalRemunerationTrimestre
+          this.varTotalRemunerationAnnee =res.sommeTotalRemunerationAnnee
+        
+      }
+    )
 
     this.placementService.getPlacementResolver().subscribe(
       res=>{
         for(let item of res){
-          // 1
-          this.nbrePlacementGlobal = this.nbrePlacementGlobal+1
-          this.montantPlacementGlobal = this.montantPlacementGlobal+item.pla_montant_depot
-          this.varTotalRemunerationDateDuJour = this.varTotalRemunerationDateDuJour + item.pla_produits_placement_consommes_date_jour
-          this.varTotalRemunerationTrimestre =this.varTotalRemunerationTrimestre + item.pla_produits_placement_consommes_trimestre_comptable
-          this.varTotalRemunerationAnnee =this.varTotalRemunerationAnnee + item.pla_produits_placement_consommes_annee_comptable
-          // 2. Get Count and Sum By TypePlacement
+          
           if(!listTypePlacementId.includes(item.pla_id_typ_placement)){
             listTypePlacementId.push(item.pla_id_typ_placement)
           }
-
           this.typePlacementService.getTypeplacementResolver().subscribe(
             res2=>{
               for(let item2 of res2){
@@ -156,7 +156,7 @@ export class DashboardPlacementComponent implements OnInit {
             }
           )
 
-          // 3.Get the number of investments in each bank / the total amount invested in each bank.
+          /*
           if(!listPlacementBanqueId.includes(item.pla_organisme_societe)){
             if(item.pla_organisme_societe!=0){
               listPlacementBanqueId.push(item.pla_organisme_societe)
@@ -164,7 +164,6 @@ export class DashboardPlacementComponent implements OnInit {
           }
           this.organismeService.getOrganismeResolver().subscribe(
             res3=>{
-              // continuite de 3
           for(let item of listPlacementBanqueId){
 
             for(let item3 of res3){
@@ -193,124 +192,8 @@ export class DashboardPlacementComponent implements OnInit {
           totalTauxPlacementByBanque.forEach((value, index)=>{
             this.moyenneTauxPlacementByBanque.push(value/this.nbrePlacementByBanque[index])
           })
+        */
 
-
-
-          /*
-        listActionId.forEach((value, index)=>{
-          if(value ==6){
-            this.nbrePlacementByAction_Action.push(this.nbrePlacementByAction[index])
-            this.montantPlacementByAction_Action.push(this.montantPlacementByAction[index])
-            this.listActionLibelle_Action.push("Actions")
-
-            this.nbrePlacementByAction.splice(index,1)
-            this.montantPlacementByAction.splice(index,1)
-            this.listActionLibelle.splice(index,1)
-          }
-
-        }) */
-          /*Bar chart */
-/*
-         new Chart("BarChart", {
-            type: 'bar',
-            data : {
-              labels:  this.listBanqueLibelle,
-              datasets: [{
-                  data:  this.montantPlacementByBanque,
-                  backgroundColor: [
-                    'rgba(248,155	,58, 0.5)',
-                    'rgba(0,145,97, 0.5)',
-                    'rgba(255, 206, 86, 0.5)',
-                    'rgba(102, 76, 85,0.5)',
-                    'rgba(153, 102, 255, 0.5)',
-                    'rgba(255, 159, 64, 0.5)'
-                ],
-                borderColor: [
-                  'rgba(248,155	,58, 1)',
-                  'rgba(0,145,97, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(102, 76, 85,1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-              }]
-          },
-          options: {
-            plugins: {
-              legend: {
-                display: false
-              }
-            }
-          }
-
-        })
-         /*End Bar chart */
-         /*Bar chart2 */
-         /*
-        new Chart("BarChartTaux", {
-          type: 'bar',
-          data : {
-            labels:  this.listBanqueLibelle,
-            datasets: [{
-                data:  this.moyenneTauxPlacementByBanque,
-                backgroundColor: [
-                  'rgba(248,155	,58, 0.5)',
-                  'rgba(0,145,97, 0.5)',
-                  'rgba(255, 206, 86, 0.5)',
-                  'rgba(102, 76, 85,0.5)',
-                  'rgba(153, 102, 255, 0.5)',
-                  'rgba(255, 159, 64, 0.5)'
-              ],
-              borderColor: [
-                'rgba(248,155	,58, 1)',
-                'rgba(0,145,97, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(102, 76, 85,1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 1
-            }]
-        },
-        options: {
-          plugins: {
-            legend: {
-              display: false
-            }
-          }
-        }
-      })
-         /*Pie chart */
-/*
-         var chart1 = new Chart("PieChartCountBanque", {
-          type: 'doughnut',
-          data : {
-            labels: this.listBanqueLibelle,
-            datasets: [{
-                data: this.nbrePlacementByBanque,
-                backgroundColor: [
-                  'rgba(248,155	,58, 0.5)',
-                  'rgba(0,145,97, 0.5)',
-                  'rgba(255, 206, 86, 0.5)',
-                  'rgba(102, 76, 85,0.5)',
-                  'rgba(153, 102, 255, 0.5)',
-                  'rgba(255, 159, 64, 0.5)'
-              ],
-              borderColor: [
-                'rgba(248,155	,58, 1)',
-                'rgba(0,145,97, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(102, 76, 85,1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-              ],
-            }],
-        },
-      })*/
-
-    }
-    )
   }
   this.getHistoriqueRealisation()
   })
@@ -332,8 +215,6 @@ export class DashboardPlacementComponent implements OnInit {
       }
     )
    }
-
-
 
    getDetailPlacementFinancier(){
     let listActionId:number[]=[];
@@ -573,47 +454,92 @@ export class DashboardPlacementComponent implements OnInit {
    return {progPourcentage,progStyle}
   }
 
-/*
-  getAction(){
-    // Action doonnees pour la bar chart :
-     this.placementService.getPlacementResolverAction().subscribe(
-      res=>{
-        for(let item of res){
-          if(item.pla_action_cotee==1){
-            this.listNomEntrepriseCotes.push(item.pla_societe)
-            this.listPrixJour.push(item.pla_prix_jour)
-            this.listPrixAchat.push(item.pla_prix_achat)
+ getPlacementProfitMoyenParBanque(){
+  // Fonction permettant de calculer le taux moyen des placements en cours ou arrivés à échéance durant l'année en cours, regroupés par banque.
+  let moyenneTauxPlacementParBanque:any[]=[]
+  let listBanqueLibelleTauxMoyenProfit:any[]=[]
+  this.placementService.getPlacementProfitMoyenParBanque().subscribe(
+    res=>{
+      for(let item of res){
+        moyenneTauxPlacementParBanque.push(item.moyenneTauxProfit)
+        listBanqueLibelleTauxMoyenProfit.push(item.organismeLibelle)
+      }
+      this.barChart(moyenneTauxPlacementParBanque, listBanqueLibelleTauxMoyenProfit,"BarChart2")
+    }
+  )
+ }
+
+ getPlacementTotalMontantDepotParBanque(){
+  // Fonction permettant de calculer le montant total des placements en cours ou arrivés à échéance durant l'année en cours, regroupés par banque.
+  let montantPlacementParBanque:any[]=[]
+  let listBanqueLibelleMontantProfit:any[]=[]
+  let countNbrePlacementParBanque:any[]=[]
+
+  this.placementService.getPlacementTotalMontantDepotParBanque().subscribe(
+    res=>{
+      for(let item of res){
+        montantPlacementParBanque.push(item.sommeMontantPlacement)
+        listBanqueLibelleMontantProfit.push(item.organismeLibelle)
+        countNbrePlacementParBanque.push(item.nombrePlacements)
+      }
+      this.barChart(montantPlacementParBanque, listBanqueLibelleMontantProfit,"BarChart1")
+      this.pieChart(countNbrePlacementParBanque,listBanqueLibelleMontantProfit,"PieChartCountBanque")
+    }
+  )
+ }
+
+ barChart(dataList:any,labelList:any,idBarchart:string){
+  let barChart:any
+  try{
+    barChart=new Chart(idBarchart, {
+      type: 'bar',
+      data : {
+        labels: labelList,
+        datasets: [{
+          data: dataList,
+          backgroundColor: [
+              'rgba(248,155	,58, 0.5)',
+              'rgba(0,145,97, 0.5)',
+              'rgba(255, 206, 86, 0.5)',
+              'rgba(102, 76, 85,0.5)',
+              'rgba(153, 102, 255, 0.5)',
+              'rgba(255, 159, 64, 0.5)'
+          ],
+          borderColor: [
+            'rgba(248,155	,58, 1)',
+            'rgba(0,145,97, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(102, 76, 85,1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+        }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false
         }
       }
+    }
+    })
+  }
+  catch{
+    //barChart.destroy()
+    console.log("Errore avec : "+ idBarchart )
+  }
+}
 
-       new Chart("BarChartPrixAction", {
-        type: 'bar',
-        data : {
-          labels:  this.listNomEntrepriseCotes,
-          datasets: [{
-              data:  this.listPrixAchat,
-              indexAxis: 'y',
-              backgroundColor: [
-                'rgba(248,155	,58, 0.5)',
-                'rgba(0,145,97, 0.5)',
-                'rgba(255, 206, 86, 0.5)',
-                'rgba(102, 76, 85,0.5)',
-                'rgba(153, 102, 255, 0.5)',
-                'rgba(255, 159, 64, 0.5)'
-            ],
-            borderColor: [
-              'rgba(248,155	,58, 1)',
-              'rgba(0,145,97, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(102, 76, 85,1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-          },
-          {
-            data: this.listPrixJour,
-            indexAxis: 'y',
+pieChart(dataList:any,labelList:any,idPiechart:string){
+  let pieChart:any
+  try{
+    pieChart=new Chart(idPiechart, {
+      type: 'doughnut',
+      data : {
+        labels: labelList,
+        datasets: [{
+            data: dataList,
             backgroundColor: [
               'rgba(248,155	,58, 0.5)',
               'rgba(0,145,97, 0.5)',
@@ -630,24 +556,17 @@ export class DashboardPlacementComponent implements OnInit {
             'rgba(153, 102, 255, 1)',
             'rgba(255, 159, 64, 1)'
           ],
-          borderWidth: 1
-        }
+        }],
+    },
+  })
+  }
+  catch{
+    //pieChart.destroy()
+    console.log("Errore avec : "+ idPiechart )
 
-        ]
-      },
-      options: {
-        plugins: {
-          legend: {
-            display: false
-          }
-        }
-      }
-    })
-    }
-  )
- }*/
+  }
+}
 
 
-
-
+ 
 }

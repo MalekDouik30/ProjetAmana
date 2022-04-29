@@ -181,14 +181,14 @@ namespace BackendPlacement.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Placement>>> GetPlacement()
         {
-            
-            _context.Database.ExecuteSqlRaw("EXEC [dbo].[verifDateEchance]"); // verif date echance
-            _context.Database.ExecuteSqlRaw("EXEC [dbo].[CalculateCompensation] @nbeJourAnnee = " + VerifAnneeBissextile());
 
-            /*var placement2 = _context.Placements.Where(p => p.pla_etat == "en cours" || p.pla_date_echeance.Year == DateTime.Now.Year).ToListAsync();
+            //_context.Database.ExecuteSqlRaw("EXEC [dbo].[verifDateEchance]"); // verif date echance
+            //_context.Database.ExecuteSqlRaw("EXEC [dbo].[CalculateCompensation] @nbeJourAnnee = " + VerifAnneeBissextile());
+
+            /*var placement2 = _context.Placements.Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year  ).ToListAsync();
             return await placement2;*/
 
-           return await _context.Placements.ToListAsync();
+            return await _context.Placements.ToListAsync();
         }
 
 
@@ -196,13 +196,11 @@ namespace BackendPlacement.Controllers
         public async Task<ActionResult<IEnumerable<Placement>>> GetPlacementByTypeAction(long? typeAction)
         {
             return await _context.Placements.FromSqlRaw("Select * from placement where pla_id_type_action = " + typeAction).ToListAsync();
-
         }
 
         [HttpGet("GetPlacementStatistique")]
         public ActionResult<Placement> GetPlacementStatistique()
         {
-
             try
             {
                 var placement = _context.Placements
@@ -224,7 +222,7 @@ namespace BackendPlacement.Controllers
             }
         }
 
-            [HttpGet("DernierTauxPlacementParBanque")]
+        [HttpGet("DernierTauxPlacementParBanque")]
         public ActionResult<Placement> GetDernierTauxPlacementParBanque()
         {
             /*
@@ -242,7 +240,6 @@ namespace BackendPlacement.Controllers
                                                 .Where(p => p.pla_organisme_societe != 0)
                                                 .GroupBy(p => p.pla_organisme_societe)
                                                 .Select(g => new { InstitutionFinanciere = g.Key, date = g.Max(x => x.pla_date_souscription) }).ToList();
-
                 var innerJoinQuery = from t in placementCandition
                                      from p in placements
                                      join o in organismes on p.pla_organisme_societe equals o.org_id
@@ -256,6 +253,110 @@ namespace BackendPlacement.Controllers
                                      };
 
                 return Ok(innerJoinQuery);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+
+        [HttpGet("GetTotaux")]
+        public ActionResult<Placement> GetTotaux()
+        {
+            // Fonction permettant de calculer le totaux de different colonnes :
+            //  1- total Nbre Placement en cours
+            //  2- total montant placement global
+            //  3- total remuneration date du jour / trimestre comptable / année comptable
+            try
+            {
+                var count = _context.Placements
+                                       .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year).Count();
+
+                var sommeMontantDepot = _context.Placements
+                       .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year).Sum(x => x.pla_montant_depot);
+
+                var sommeRemunerationDateJour = _context.Placements
+                    .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year).Sum(x => x.pla_produits_placement_consommes_date_jour);
+
+                var sommeRemunerationTrimestre = _context.Placements
+                    .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year).Sum(x => x.pla_produits_placement_consommes_trimestre_comptable);
+
+                var sommeRemunerationAnnee = _context.Placements
+                    .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year).Sum(x => x.pla_produits_placement_consommes_annee_comptable);
+
+                var totauxPlacement = new { nbreTotalPlacement = count,
+                    sommeTotaleMontantDepot = sommeMontantDepot,
+                    sommeTotalRemunerationDateJour = sommeRemunerationDateJour,
+                    sommeTotalRemunerationTrimestre = sommeRemunerationTrimestre,
+                    sommeTotalRemunerationAnnee = sommeRemunerationAnnee,
+                };
+                return Ok(totauxPlacement);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpGet("GetTauxProfitMoyenParBanque")]
+        public ActionResult<Placement> GetTauxProfitMoyenParBanque()
+        {
+            // Fonction permettant de calculer le taux moyen des placements en cours ou arrivés à échéance durant l'année en cours, regroupés par banque.
+            try
+            {
+                var placement = _context.Placements
+                                        .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year)
+                                        .GroupBy(p => p.pla_organisme_societe)
+                                        .Select(g => new { IdBanque = g.Key, 
+                                            NombrePlacements = g.Count(),
+                                            SommetotaleProfit = g.Sum(x => x.pla_taux_profit),
+                                            MoyenneTauxProfit = g.Sum(x => x.pla_taux_profit) / g.Count()
+                                        }).ToList();
+                var organismes = _context.Organismes.ToList();
+                var joinPlacementOrganisme = from p in placement
+                                             join o in organismes on p.IdBanque equals o.org_id
+                                             select new
+                                             {
+                                                 IdBanque = p.IdBanque,
+                                                 NombrePlacements = p.NombrePlacements,
+                                                 SommeMontantPlacement = p.SommetotaleProfit,
+                                                 MoyenneTauxProfit = p.MoyenneTauxProfit,
+                                                 OrganismeLibelle = o.org_libelle
+                                             }; 
+                return Ok(joinPlacementOrganisme);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpGet("GetTotalMontantDepotParBanque")]
+        public ActionResult<Placement> GetTotalMontantDepotParBanque()
+        {
+            // Fonction permettant de calculer la somme du montant depot des placements en cours ou arrivés à échéance durant l'année en cours, regroupés par banque.            try
+            try
+            {
+                var placement = _context.Placements
+                                        
+                                        .GroupBy(p => p.pla_organisme_societe)
+                                        .Select(g => new {
+                                            IdBanque = g.Key,
+                                            NombrePlacements = g.Count(),
+                                            SommeMontantPlacement = g.Sum(x => x.pla_montant_depot),
+                                        }).ToList();
+                var organismes = _context.Organismes.ToList();
+                var joinPlacementOrganisme = from p in placement
+                                             join o in organismes on p.IdBanque equals o.org_id
+                                             select new
+                                             {
+                                                 IdBanque = p.IdBanque,
+                                                 NombrePlacements = p.NombrePlacements,
+                                                 SommeMontantPlacement = p.SommeMontantPlacement,
+                                                 OrganismeLibelle = o.org_libelle
+                                             };
+                return Ok(joinPlacementOrganisme);
             }
             catch (Exception)
             {

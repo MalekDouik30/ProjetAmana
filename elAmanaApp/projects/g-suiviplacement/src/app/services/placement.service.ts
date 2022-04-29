@@ -33,6 +33,17 @@ export class PlacementService {
     return this.http.get<placement[]>(this.API_URL+"/ActionCotee"); 
   }
 
+  getPlacementProfitMoyenParBanque():Observable<any[]>{
+    return this.http.get<any[]>(this.API_URL+"/GetTauxProfitMoyenParBanque")
+  }
+
+  getPlacementTotalMontantDepotParBanque():Observable<any[]>{
+    return this.http.get<any[]>(this.API_URL+"/GetTotalMontantDepotParBanque")
+  }
+
+  getPlacementTotaux():Observable<any>{
+    return this.http.get<any>(this.API_URL+"/GetTotaux")
+  }
 
   postPlacement(){    
     return this.http.post(this.API_URL+"/AjouterPlacementCapital", this.fromData);
@@ -64,6 +75,8 @@ export class PlacementService {
   validatePlacement(){
     return this.http.put(`${this.API_URL}/validate/${this.fromData.pla_id}`, this.fromData);
   }
+
+
 
 
 }
