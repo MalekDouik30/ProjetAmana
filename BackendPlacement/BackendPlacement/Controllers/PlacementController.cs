@@ -152,7 +152,6 @@ namespace BackendPlacement.Controllers
                             _context.Entry(placement).State = EntityState.Modified;
                             await _context.SaveChangesAsync();
                         }
-
                     }
                 }
                 /* Affichage palcement */
@@ -182,8 +181,8 @@ namespace BackendPlacement.Controllers
         public async Task<ActionResult<IEnumerable<Placement>>> GetPlacement()
         {
 
-            //_context.Database.ExecuteSqlRaw("EXEC [dbo].[verifDateEchance]"); // verif date echance
-            //_context.Database.ExecuteSqlRaw("EXEC [dbo].[CalculateCompensation] @nbeJourAnnee = " + VerifAnneeBissextile());
+            _context.Database.ExecuteSqlRaw("EXEC [dbo].[verifDateEchance]"); // verif date echance
+            _context.Database.ExecuteSqlRaw("EXEC [dbo].[CalculateCompensation] @nbeJourAnnee = " + VerifAnneeBissextile());
 
             /*var placement2 = _context.Placements.Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year  ).ToListAsync();
             return await placement2;*/
@@ -204,7 +203,7 @@ namespace BackendPlacement.Controllers
             try
             {
                 var placement = _context.Placements
-                       .Where(p => p.pla_date_echeance.Year <= DateTime.Now.Year)
+                       .Where(p => p.pla_etat == "en cours" || (p.pla_etat == "expire" && DateTime.Now.Year >= p.pla_date_echeance.Year))
                        .GroupBy(p => p.pla_date_echeance.Year)
                        .Select(g => new {
                            AnneEchance = g.Key,
@@ -271,19 +270,19 @@ namespace BackendPlacement.Controllers
             try
             {
                 var count = _context.Placements
-                                       .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year).Count();
+                                       .Where(p => p.pla_etat == "en cours" || (p.pla_etat == "expire" && DateTime.Now.Year >= p.pla_date_echeance.Year) ).Count();
 
                 var sommeMontantDepot = _context.Placements
-                       .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year).Sum(x => x.pla_montant_depot);
+                       .Where(p => p.pla_etat == "en cours" || (p.pla_etat == "expire" && DateTime.Now.Year >= p.pla_date_echeance.Year)).Sum(x => x.pla_montant_depot);
 
                 var sommeRemunerationDateJour = _context.Placements
-                    .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year).Sum(x => x.pla_produits_placement_consommes_date_jour);
+                    .Where(p => p.pla_etat == "en cours" || (p.pla_etat == "expire" && DateTime.Now.Year >= p.pla_date_echeance.Year)).Sum(x => x.pla_produits_placement_consommes_date_jour);
 
                 var sommeRemunerationTrimestre = _context.Placements
-                    .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year).Sum(x => x.pla_produits_placement_consommes_trimestre_comptable);
+                    .Where(p => p.pla_etat == "en cours" || (p.pla_etat == "expire" && DateTime.Now.Year >= p.pla_date_echeance.Year)).Sum(x => x.pla_produits_placement_consommes_trimestre_comptable);
 
                 var sommeRemunerationAnnee = _context.Placements
-                    .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year).Sum(x => x.pla_produits_placement_consommes_annee_comptable);
+                    .Where(p => p.pla_etat == "en cours" || (p.pla_etat == "expire" && DateTime.Now.Year >= p.pla_date_echeance.Year)).Sum(x => x.pla_produits_placement_consommes_annee_comptable);
 
                 var totauxPlacement = new { nbreTotalPlacement = count,
                     sommeTotaleMontantDepot = sommeMontantDepot,
@@ -306,7 +305,7 @@ namespace BackendPlacement.Controllers
             try
             {
                 var placement = _context.Placements
-                                        .Where(p => p.pla_etat == "en cours" && DateTime.Now.Year >= p.pla_date_echeance.Year)
+                                        .Where(p => p.pla_etat == "en cours" || (p.pla_etat == "expire" && DateTime.Now.Year >= p.pla_date_echeance.Year))
                                         .GroupBy(p => p.pla_organisme_societe)
                                         .Select(g => new { IdBanque = g.Key, 
                                             NombrePlacements = g.Count(),
